@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="..\CSS\Login.css">
+  
+    <style>
+          input[type=date], input[type=number], input[type=text]{
+            width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+        }
+        a {
+              background-color: #4CAF50;
+              border: none;
+              color: white;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <form id="form1" action="">
+        <!-- Headings for the form -->
+        <div class="headingsContainer">
+            <h3>PAYMENT DETAILS</h3>
+        </div>
+
+        <!-- Main container for all inputs -->
+        <div class="mainContainer">
+            
+            <br><br>
+            <div class="CardName">
+                <label>Name on the card </label><br>
+                <input  type="text" name="name" required/>
+            </div>
+        <br><br>
+        <div class="CardNumber">
+            <label>Card Number</label><br>
+            <input  type="text" name="number" required/>
+        </div>
+        <br><br>
+        <div class="Expirationdate">
+            <label>Expiration Date</label><br>
+            <input  type="date" name="date" required/>
+        </div>
+        <br><br>
+        <div class="CVV">
+            <label>CVV</label><br>
+            <input type="text" name="cvv" required/>
+        </div>
+        <br><br>
+            <!-- Submit button -->
+            <center><button type="submit" id="payment">Submit</button></center>
+       
+        </div>
+
+    </form>
+    <script src="..\Javascript\Payment.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body {
+    font-family: Arial;
+    background-color: black;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+form.example input[type=text] {
+    float: right;
+    font-size: 15px;
+    border: 1px solid grey;
+    background: #f1f1f1;
+  }
+  
+  form.example button {
+    float: right;
+    background: #2196F3;
+    color: white;
+    font-size: 15px;
+    border: 1px solid grey;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  h3{
+    float: right;
+    color:white;
+  }

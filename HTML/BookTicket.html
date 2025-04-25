@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="..\CSS\Login.css">
+    
+    <style>
+        input[type=date], input[type=number]{
+            width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+        }
+        a {
+              background-color: #4CAF50;
+              border: none;
+              color: white;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+            }
+            
+    </style>
+    
+</head>
+<body>
+    <form action="Payment.html" id="form" >
+        <!-- Headings for the form -->
+        <div class="headingsContainer">
+            <h3>BOOKING DETAILS</h3>
+        </div>
+     
+        <!-- Main container for all inputs -->
+        <div class="mainContainer">
+            <div>
+            <label><p id="demo"></p> </label>
+            </div> 
+            <br><br>
+            <div class="showtime">
+                <label>Available Show Timings: </label>
+                <select style="width:150px" name="showtime" id="showtime">
+                    <option selected value="select">Select</option>
+                   <option value="9:00AM">9:00AM</option>
+                   <option value="2:00AM">2:00PM</option>
+                   <option value="6:00PM">6:00PM</option>
+                </select>
+            </div>
+            <br><br>
+            <div class="showdate">
+                <label>Available Show Date: </label>
+                <input style="width:150px" type="date" id="showdate" name="date"/>
+            </div>
+        <br><br>
+        <div class="numberoftickets">
+            <label>Number Of Tickets: </label>
+            <input style="width:150px" type="number" id="nooftickets" name="nooftickets"/>
+        </div>
+        <br><br>
+            <!-- Submit button -->
+            <center><button type="submit" id="BookTicket">Confirm</button></center>
+        </div>
+
+    </form>
+    <script src="../Javascript/BookTicket.js"></script>
+</body>
+</html>

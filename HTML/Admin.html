@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="..\CSS\Login.css">
+</head>
+<body>
+    <form id="form">
+    
+        <div class="headingsContainer">
+            <h1>NEW EVENT DETAILS</h1>
+            <p>Please fill in this form to create a new show.</p>
+        </div>
+        <div class="mainContainer">
+            <label for="showname">Show Name: </label>
+            <input type="text" placeholder="Enter Show Name" id="showname" required>
+        </div>
+        <br><br>
+
+         
+        <div class="mainContainer">
+            <label for="location">Show location : </label>
+            <input type="text" placeholder="Enter Show location" id="location" required>
+        </div>
+        <br><br>
+        
+        <div class="mainContainer">
+            <label for="showstartdate">Show Start Date: </label>
+            <input type="date" placeholder="Enter Show Start Date" id="showstartdate" required>
+        </div>
+        <br><br>
+
+        <div class="mainContainer">
+            <label for="showenddate">Show End Date: </label>
+            <input type="date" placeholder="Enter Show End Date" id="showenddate" required>
+        </div>
+        <br><br>
+        <div class="mainContainer">
+            <label for="image">Show Image: </label>
+            <input type="file" placeholder="Enter Show Image" name="image" id="image" required>
+        </div>
+        <br><br>
+
+        <div class="showmonth">
+            <label>Show Month</label>
+            <select style="width:150px" name="showmonth" id="showmonth">
+               <option selected value="select">Select</option>
+               <option value="March">March</option>
+               <option value="April">April</option>
+               <option value="May">May</option>
+               <option value="June">June</option>
+               <option value="July">July</option>
+               <option value="August">August</option>
+               <option value="September">September</option>
+               <option value="October">October</option>
+               <option value="November">November</option>
+               <option value="December">December</option>
+            </select>
+        </div>
+        <br><br>
+            
+        
+        
+           
+
+            <div class="showcategory">
+                <label>Show Category</label>
+                <select style="width:150px" name="showcategory" id="showcategory">
+                   <option selected value="select">Select</option>
+                   <option value="Musicals">Musicals</option>
+                   <option value="Plays">Plays</option>
+                   <option value="Stand Up">Stand Up</option>
+                   <option value="Family Shows">Family Shows</option>
+                   <option value="Dance">Dance</option>
+                   <option value="Classical Opera">Classical & Opera</option>
+                   <option value="Concerts">Concerts</option>
+                </select>
+            </div>
+
+           <br><br>
+           <div class="mainContainer">
+            <label for="content">Show Content: </label>
+            <textarea rows="7" cols="50" placeholder="Enter Show Content" name="showcontent" id="showcontent" required></textarea>
+        <br><br>
+           
+        <div class="mainContainer">
+            <label for="ticket_cost">Show Ticket Cost : </label>
+            <input type="text" placeholder="Enter Show Ticket Cost" id="ticket_cost" required>
+        </div>
+        <br><br>
+        <div class="mainContainer">
+            <label for="taxes">Show Ticket Taxes : </label>
+            <input type="text" placeholder="Enter Show Ticket Taxes" id="taxes" required>
+        </div>
+        <br><br>
+            <center><button type="submit" class="registerbtn">Submit</button></center>
+            </div>
+  
+        
+
+        </div>
+
+    </form>
+    <script src="../Javascript/Admin.js"></script>
+</body>
+</html>

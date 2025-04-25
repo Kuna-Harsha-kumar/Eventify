@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="..\CSS\Login.css">
+   
+    <style>
+         
+        
+        a {
+              background-color: #4CAF50;
+              border: none;
+              color: white;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <form id="form1" action="">
+        <!-- Headings for the form -->
+        <div class="headingsContainer">
+            <h3>FINAL PAYMENT DETAILS</h3>
+        </div>
+
+        <!-- Main container for all inputs -->
+        <div class="mainContainer">
+            
+            <br><br>
+        
+            <label>No Of Tickets: </label>
+               <label id="nooftickets"></label>
+        
+        <br><br>
+        
+            <label>Ticket Cost: $</label>
+               <label id="ticketcost"></label>
+        
+        <br><br>
+        
+            <label>Taxes: $</label><label id="taxes"></label>
+        
+        <br><br>
+        
+            <label>Total Cost: $</label>
+               <label id="totalcost">21.67</label>
+        
+        <br><br>
+            <!-- Submit button -->
+            <center><button id="pay" onclick="submitpayment()">PAY</button></center>
+        </div>
+
+    </form>
+    <script src="..\Javascript\FinalPayment.js"></script>
+</body>
+</html>

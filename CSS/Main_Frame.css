@@ -1,0 +1,119 @@
+p{
+    font-size: small;
+}
+body{
+    
+    overflow: hidden;
+  }
+.container{
+    float:right;
+    width: 70%;
+  }
+.overlay {
+position: absolute; 
+bottom: 0; 
+background: rgb(0, 0, 0);
+background: rgba(0, 0, 0, 0.5); /* Black see-through */
+color: #f1f1f1; 
+width: 100%;
+transition: .5s ease;
+opacity:0;
+color: white;
+font-size: 20px;
+padding: 20px;
+text-align: center;
+}
+body {
+    font-family: "Lato", sans-serif;
+    background-color: aliceblue;
+  }
+  
+  .sidenav {
+    background-color: blanchedalmond;
+    float: left;
+    top: 1;
+    left: 0;
+    overflow-x: scroll;
+    padding-top: 20px;
+    width:100%;
+  }
+  html { overflow-y: scroll; }
+.imgleft{
+    max-width: 100%;
+    max-height:100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.textright{
+    font-size: 20px;
+    padding-left: 20px;
+}
+.shows{
+    display: flex;
+  align-items: left;
+  justify-content: left;
+}
+  .dropdown-btn{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    border: none;
+    width:100%;
+    background: none;
+    
+    cursor: pointer;
+    outline: none;
+  }
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: red;
+    display: block;
+    border: none;
+    background: none;
+   
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* On mouse-over */
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: burlywood;
+  }
+  
+  /* Main content */
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  /* Add an active class to the active dropdown button */
+  
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    padding-left: 8px;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    padding-right: 8px;
+  }
+  
+  /* Some media queries for responsiveness */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+.right{
+    float: left;
+}
+*{
+    box-sizing: border-box;
+}

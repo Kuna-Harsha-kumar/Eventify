@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="..\CSS\Login.css">
+    
+</head>
+<body>
+    <form id="form" >
+        <!-- Headings for the form -->
+        <div class="headingsContainer">
+            <h3>Login</h3>
+            <p>Login with your username and password</p>
+        </div>
+
+        <!-- Main container for all inputs -->
+        <div class="mainContainer">
+            <!-- Username -->
+            <label for="username">Your username</label>
+            <input type="text" id="username" placeholder="Enter Username" name="username" required>
+
+            <br><br>
+
+            <!-- Password -->
+            <label for="pswrd">Your password</label>
+            <input type="password" placeholder="Enter Password" id="password" name="pswrd" required>
+            <br><br>
+            <div class="loginas">
+                <label>Login as: </label>
+                <select style="width:150px" name="login as" id="loginas">
+                    <option selected value="select">Select</option>
+                   <option value="Admin">Admin</option>
+                   <option value="User">User</option>
+                </select>
+            </div>
+            <br><br>
+            <!-- sub container for the checkbox and forgot password link -->
+            <div class="subcontainer">
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+
+            <!-- Submit button -->
+            <center><button type="submit" class="loginbtn">Login</button></center>
+
+            <!-- Sign up link -->
+            <p class="register">Not a member?  <a href="Register.html">Register here!</a></p>
+
+        </div>
+
+    </form>
+    <script src="..\Javascript\Login.js"></script>
+</body>
+</html>

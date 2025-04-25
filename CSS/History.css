@@ -1,0 +1,27 @@
+
+
+table {
+    margin: 50px auto;
+    width: 90%;
+}
+
+table, th, td {
+    border-collapse: collapse;
+ 
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+main{
+    width:60%;
+    margin: auto;
+    color:beige;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 20px 25px;
+}
