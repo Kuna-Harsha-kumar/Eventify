@@ -1,42 +1,54 @@
-const mysql = require('mysql2');
 const dotenv = require('dotenv');
-let instance = null;
 dotenv.config();
+const mysql = require('mysql2');
 
-const connection = mysql.createConnection({
-    host: process.env.HOST,
-    user: process.env.USER,
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE,
-    port: process.env.DB_PORT
-});
-
-
-connection.connect((err) => {
-    if (err) {
-        console.log(err.message);
-    }
-     console.log('db ' + connection.state);
-});
-
+console.log("HOST:", process.env.HOST);
+console.log("USER:", process.env.MYSQL_USER);
+console.log("DATABASE:", process.env.DATABASE);
+console.log("PORT:", process.env.DB_PORT);
 
 class DbService {
-    static getDbServiceInstance() {
-        return instance ? instance : new DbService();
+    static instance = null;
+
+    constructor() {
+        this.connection = mysql.createConnection({
+            host: process.env.HOST,
+            user: process.env.MYSQL_USER,
+            password: process.env.PASSWORD,
+            database: process.env.DATABASE,
+            port: process.env.DB_PORT
+        });
+
+        this.dbConnectPromise = new Promise((resolve, reject) => {
+            this.connection.connect((err) => {
+                if (err) {
+                    reject(new Error('Error connecting to DB: ' + err.message));
+                } else {
+                    resolve('Connected to DB');
+                }
+            });
+        });
     }
-    async checkLoginCredentialsAdmin (username, password) {
+
+    static getDbServiceInstance() {
+        if (!DbService.instance) {
+            DbService.instance = new DbService();
+        }
+        return DbService.instance;
+    }
+
+    async checkLoginCredentialsAdmin(username, password) {
         try {
             const response = await new Promise((resolve, reject) => {
                 const query = "SELECT * FROM admindetails WHERE username = ? AND password = ?;";
     
-                connection.query(query, [username, password], (err, results) => {
+                this.connection.query(query, [username, password], (err, results) => {
                     if (err) reject(new Error(err.message));
                     resolve(results);
-                })
+                });
             });
             console.log(response.length);
             if (response.length > 0) {
-                
                 return true;
             } else {
                 return false;
@@ -47,19 +59,18 @@ class DbService {
         }
     }
 
-    async checkLoginCredentialsUser (username, password) {
+    async checkLoginCredentialsUser(username, password) {
         try {
             const response = await new Promise((resolve, reject) => {
                 const query = "SELECT * FROM userdetails WHERE username = ? AND password = ?;";
     
-                connection.query(query, [username, password], (err, results) => {
+                this.connection.query(query, [username, password], (err, results) => {
                     if (err) reject(new Error(err.message));
                     resolve(results);
-                })
+                });
             });
     
             if (response.length > 0) {
-                
                 return true;
             } else {
                 return false;
@@ -69,41 +80,39 @@ class DbService {
             return false;
         }
     }
-
 
     async Bookingdetails(name, showtime, showdate, nooftickets, username) {
         try {
             const insertId = await new Promise((resolve, reject) => {
                 const query = "INSERT INTO bookingdetails (name, showtime, showdate, nooftickets, username) VALUES (?,?,?,?,?);";
 
-                connection.query(query, [name, showtime, showdate, nooftickets, username] , (err, result) => {
+                this.connection.query(query, [name, showtime, showdate, nooftickets, username], (err, result) => {
                     if (err) reject(new Error(err.message));
-                    console.log("result"+result); 
+                    console.log("result" + result); 
                     resolve(result);
-                })
+                });
             });
             return {
                 name : name,
                 showtime : showtime,
                 showdate: showdate,
                 nooftickets: nooftickets,
-                username:username
+                username: username
             };
         } catch (error) {
             console.log(error);
         }
-      }
+    }
 
-      
     async getAllData(name) {
         try {
             const response = await new Promise((resolve, reject) => {
                 const query = "SELECT * FROM paymentdetails WHERE name = ?;";
-                console.log("query="+query);
-                connection.query(query, [name], (err, results) => {
+                console.log("query=" + query);
+                this.connection.query(query, [name], (err, results) => {
                     if (err) reject(new Error(err.message));
                     resolve(results);
-                })
+                });
             });
             console.log(response);
             return response;
@@ -117,10 +126,10 @@ class DbService {
             const response = await new Promise((resolve, reject) => {
                 const query = "SELECT * FROM bookingdetails WHERE username=?;";
 
-                connection.query(query, [username],(err, results) => {
+                this.connection.query(query, [username], (err, results) => {
                     if (err) reject(new Error(err.message));
                     resolve(results);
-                })
+                });
             });
             console.log(response);
             return response;
@@ -129,15 +138,15 @@ class DbService {
         }
     }
 
-    async Admindetails(username,emailid,password) {
+    async Admindetails(username, emailid, password) {
         try {
             const insertId = await new Promise((resolve, reject) => {
                 const query = "INSERT INTO admindetails (username, emailid, password) VALUES (?,?,?);";
 
-                connection.query(query, [username, emailid, password] , (err, result) => {
+                this.connection.query(query, [username, emailid, password], (err, result) => {
                     if (err) reject(new Error(err.message)); 
                     resolve(result);
-                })
+                });
             });
             return {
                 username : username,
@@ -147,17 +156,17 @@ class DbService {
         } catch (error) {
             console.log(error);
         }
-      }
+    }
 
-      async Userdetails(username,emailid,password) {
+    async Userdetails(username, emailid, password) {
         try {
             const insertId = await new Promise((resolve, reject) => {
                 const query = "INSERT INTO userdetails (username, emailid, password) VALUES (?,?,?);";
 
-                connection.query(query, [username, emailid, password] , (err, result) => {
+                this.connection.query(query, [username, emailid, password], (err, result) => {
                     if (err) reject(new Error(err.message)); 
                     resolve(result);
-                })
+                });
             });
             return {
                 username : username,
@@ -167,18 +176,18 @@ class DbService {
         } catch (error) {
             console.log(error);
         }
-      }
+    }
 
-      async AdminShowDetails(showname, showmonth, showcategory, location, imgsrc, showstartdate, showenddate,showcontent, ticket_cost, taxes) {
+    async AdminShowDetails(showname, showmonth, showcategory, location, imgsrc, showstartdate, showenddate, showcontent, ticket_cost, taxes) {
         try {
             console.log(showname);
             const insertId = await new Promise((resolve, reject) => {
                 const query = "INSERT INTO adminbookingdetails (showname, showmonth, showcategory, location, showstartdate, showenddate, imgsrc, showcontent) VALUES (?,?,?,?,?,?,?,?);";
 
-                connection.query(query, [showname, showmonth, showcategory, location, showstartdate, showenddate, imgsrc,showcontent] , (err, result) => {
+                this.connection.query(query, [showname, showmonth, showcategory, location, showstartdate, showenddate, imgsrc, showcontent], (err, result) => {
                     if (err) reject(new Error(err.message));
                     resolve(result);
-                })
+                });
             });
             return {
                 showname : showname,
@@ -187,24 +196,23 @@ class DbService {
                 location: location,
                 showstartdate: showstartdate,
                 showenddate: showenddate,
-                showcontent:showcontent
+                showcontent: showcontent
             };
         } catch (error) {
             console.log(error);
         }
-      }
+    }
 
-
-      async AdminShowticketDetails(showname, ticket_cost, taxes) {
+    async AdminShowticketDetails(showname, ticket_cost, taxes) {
         try {
             console.log(showname);
             const insertId = await new Promise((resolve, reject) => {
                 const query = "INSERT INTO paymentdetails (name, ticket_cost, taxes) VALUES (?,?,?);";
 
-                connection.query(query, [showname, ticket_cost, taxes] , (err, result) => {
+                this.connection.query(query, [showname, ticket_cost, taxes], (err, result) => {
                     if (err) reject(new Error(err.message));
                     resolve(result);
-                })
+                });
             });
             return {
                 showname : showname,
@@ -214,17 +222,17 @@ class DbService {
         } catch (error) {
             console.log(error);
         }
-      }
+    }
 
-      async getHighlightsbymonth(showmonth) {
+    async getHighlightsbymonth(showmonth) {
         try {
             console.log(showmonth);
             const response = await new Promise((resolve, reject) => {
                 const query = "SELECT * FROM adminbookingdetails WHERE showmonth = ?;";
-                connection.query(query, [showmonth], (err, results) => {
+                this.connection.query(query, [showmonth], (err, results) => {
                     if (err) reject(new Error(err.message));
                     resolve(results);
-                })
+                });
             });
             return response;
         } catch (error) {
@@ -236,18 +244,16 @@ class DbService {
         try {
             const response = await new Promise((resolve, reject) => {
                 const query = "SELECT * FROM adminbookingdetails WHERE showcategory = ?;";
-                connection.query(query, [category], (err, results) => {
+                this.connection.query(query, [category], (err, results) => {
                     if (err) reject(new Error(err.message));
                     resolve(results);
-                })
+                });
             });
             return response;
         } catch (error) {
             console.log(error);
         }
     }
-    
-    
 }
 
 module.exports = DbService;

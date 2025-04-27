@@ -42,7 +42,7 @@ var imagename=image.name;
 var ticket_cost=formDataValues['ticket_cost'];
 var taxes=formDataValues['taxes'];
 console.log(image.name);
-const request1 = fetch('http://localhost:5000/adminshowdetails', {
+const request1 = fetch('http://localhost:3000/adminshowdetails', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
@@ -51,7 +51,7 @@ const request1 = fetch('http://localhost:5000/adminshowdetails', {
 })
 .then(response => response.json());
 
-const request2 = fetch('http://localhost:5000/adminshowticketdetails', {
+const request2 = fetch('http://localhost:3000/adminshowticketdetails', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
