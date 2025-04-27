@@ -8,7 +8,7 @@ form.addEventListener('submit', (event) => {
     const username = usernameInput.value;
     const password = passwordInput.value;
 	const loginas=loginasInput.value;
-    fetch('http://localhost:5000/login', {
+    fetch('http://localhost:3001/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

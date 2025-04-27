@@ -23,7 +23,7 @@ form.addEventListener('submit', (event) => {
    const showtime = showtimeInput.value;
    const showdate=showdateInput.value;
    const nooftickets=noofticketsInput.value;
-   fetch('http://localhost:5000/bookings', {
+   fetch('http://localhost:3001/bookings', {
        method: 'POST',
        headers: {
            'Content-Type': 'application/json'

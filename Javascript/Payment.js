@@ -2,7 +2,7 @@ var nameInput=localStorage.getItem('name');
 form1.addEventListener('submit',(event)=>{
     event.preventDefault();
     var name=nameInput;
-    fetch('http://localhost:5000/payments/' + name)
+    fetch('http://localhost:3001/payments/' + name)
     .then(response => response.json())
     .then(data => paymentdetails(data['data']));
 });
