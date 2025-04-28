@@ -1,6 +1,6 @@
 var username=localStorage.getItem('username');
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://localhost:5000/getHistoryAll/' + username)
+    fetch('http://localhost:3001/getHistoryAll/' + username)
     .then(response => response.json())
     .then(data => loadHTMLTable(data['data']));
 });

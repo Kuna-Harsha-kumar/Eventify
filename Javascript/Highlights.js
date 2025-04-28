@@ -1,7 +1,7 @@
 var username=localStorage.getItem('username');
 var showmonth1=document.title;
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://localhost:5000/getHighlightsbymonth',{
+    fetch('http://localhost:3001/getHighlightsbymonth',{
     method: 'POST',
        headers: {
            'Content-Type': 'application/json'

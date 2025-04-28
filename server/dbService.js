@@ -257,3 +257,26 @@ class DbService {
 }
 
 module.exports = DbService;
+
+
+// OLAP:
+
+
+// SELECT username, SUM(nooftickets) AS total_tickets
+// FROM bookingdetails
+// GROUP BY username;
+
+// SELECT DATE_FORMAT(showdate, '%Y-%m') AS month, COUNT(*) AS bookings
+// FROM bookingdetails
+// GROUP BY month;
+
+// SELECT name, SUM(nooftickets) AS total_tickets
+// FROM bookingdetails
+// GROUP BY name
+// ORDER BY total_tickets DESC;
+
+// SELECT b.name, u.username, (b.nooftickets*p.ticket_cost) AS total_revenue
+// FROM bookingdetails b
+// JOIN userdetails u ON b.username = u.username
+// join bookingdetails b2  on b2.name =b.name
+// JOIN paymentdetails p on p.name =b.name;

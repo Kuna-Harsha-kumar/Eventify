@@ -13,7 +13,7 @@ form.addEventListener('submit', (event) => {
     const retypepassword=retypepasswordInput.value;
     const registeras=registerasInput.value;
     if(password==retypepassword){
-    fetch('http://localhost:5000/registerasoption', {
+    fetch('http://localhost:3001/registerasoption', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

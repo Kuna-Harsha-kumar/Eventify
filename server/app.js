@@ -17,14 +17,17 @@ app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
   });
 
-var storage = multer.diskStorage({
+  var storage = multer.diskStorage({
     destination: (req, file, callBack) => {
-        callBack(null, '../images/')    
+        console.log('📦 Multer destination called for file:', file.originalname);  // 👈 Add this
+        callBack(null, path.join(__dirname, '../images/'));
     },
     filename: (req, file, callBack) => {
-        callBack(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+        const filename = file.fieldname + '-' + Date.now() + path.extname(file.originalname);
+        console.log('📄 Multer filename set to:', filename);  // 👈 Add this
+        callBack(null, filename);
     }
-})
+}); 
  
 var upload = multer({
     storage: storage
@@ -123,11 +126,13 @@ app.post('/adminshowdetails',upload.single('image'),(request, response) => {
 });
 
 app.post('/adminshowticketdetails',(request, response) => {
+    // console.log("COMING HERE")
     const showname=request.body.showname;
     const ticket_cost=request.body.ticket_cost;
     const taxes=request.body.taxes;
   const db = dbService.getDbServiceInstance();
   const result = db.AdminShowticketDetails(showname, ticket_cost, taxes);
+  console.log(result);
   result.then(data => {
     response.json({ data: data });
   }).catch(err => {

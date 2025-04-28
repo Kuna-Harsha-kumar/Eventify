@@ -2,7 +2,7 @@ var username=localStorage.getItem('username');
 var category=document.title;
 document.addEventListener('DOMContentLoaded', function () {
     
-    fetch('http://localhost:5000/getHighlightsbycategory',{
+    fetch('http://localhost:3001/getHighlightsbycategory',{
     method: 'POST',
        headers: {
            'Content-Type': 'application/json'
