@@ -1,47 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Morgan Wallen</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <title>Morgan Wallen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .header-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 16px;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 14px 28px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #1e8449;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
             }
-            </style>
-    </head>
-    <body>
-        <center><img class="mySlides" src="../Images\morgan.jpg" width="80%" height="300" > </center>
+
+            a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img class="header-image" src="../Images/morgan.jpg" alt="Morgan Wallen">
+        
         <h3>WHY WATCH MORGAN WALLEN?</h3>
         <h3>ONCE UPON A TIME</h3>
-        <P>Wallen's music is known for its traditional country sound and honest lyrics that often touch on 
+        <p>Wallen's music is known for its traditional country sound and honest lyrics that often touch on 
             themes of love, heartbreak, and small-town life. He has been praised for his powerful voice and 
-            ability to connect with his audience through his music.However, Wallen has also been the subject 
+            ability to connect with his audience through his music. However, Wallen has also been the subject 
             of controversy in recent years, after a video surfaced online showing him using a racial slur. 
             The incident led to his music being pulled from several radio stations and award shows, and he 
             has since apologized for his actions and taken steps to educate himself on issues of racism and 
-            inequality.Despite the controversy, Wallen's music continues to resonate with fans, and he remains 
-            one of the most popular and successful country artists of his generation.</P>
-        <H3>WHAT'S THE STORY?</H3>
-        <P>Morgan Wallen is an American country music singer and songwriter who rose to fame in 2018 with his 
+            inequality. Despite the controversy, Wallen's music continues to resonate with fans, and he remains 
+            one of the most popular and successful country artists of his generation.</p>
+
+        <h3>WHAT'S THE STORY?</h3>
+        <p>Morgan Wallen is an American country music singer and songwriter who rose to fame in 2018 with his 
             debut album "If I Know Me". Wallen was born on May 13, 1993, in Sneedville, Tennessee, and grew up 
-            in a family of musicians.He began singing at a young age and later moved to Nashville to pursue a 
+            in a family of musicians. He began singing at a young age and later moved to Nashville to pursue a 
             career in music. Wallen gained recognition after competing on the sixth season of the singing 
-            competition show "The Voice" in 2014, where he was eliminated in the Battle Rounds.In 2017, Wallen 
+            competition show "The Voice" in 2014, where he was eliminated in the Battle Rounds. In 2017, Wallen 
             signed with the record label Big Loud Records and released his debut single "The Way I Talk", which 
             reached the top 30 on the Billboard Hot Country Songs chart. He followed this with his debut album 
-            "If I Know Me" in 2018, which included popular hits such as "Up Down" and "Whiskey Glasses".</P>
-        <H3>SoFi Stadium, Until October 22, 2023</H3>
+            "If I Know Me" in 2018, which included popular hits such as "Up Down" and "Whiskey Glasses".</p>
+
+        <h3>SoFi Stadium, Until October 22, 2023</h3>
         <a href="BookTicket.html?data=Morgan Wallen" id="ticket" onclick="bookticket()">Buy Tickets</a>
-    </body>
+    </div>
+
     <script src="../Javascript/BookTicket.js"></script>
+</body>
 </html>

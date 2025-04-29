@@ -1,101 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Musicals</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            .imgleft{
-    max-width: 100%;
-    max-height:100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.textright{
-    font-size: 20px;
-    padding-left: 20px;
-}
-.shows{
-    display: flex;
-  align-items: left;
-  justify-content: left;
-}
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>Musicals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            background-color: #8e44ad;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .shows {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            margin: 20px auto;
+            max-width: 1000px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .imgleft {
+            flex: 1;
+            min-width: 300px;
+            max-width: 300px;
+            overflow: hidden;
+        }
+
+        .imgleft img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .textright {
+            flex: 2;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .textright h3 {
+            margin-top: 0;
+            color: #8e44ad;
+        }
+
+        .textright p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #8e44ad;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #6c3483;
+        }
+
+        @media screen and (max-width: 768px) {
+            .shows {
+                flex-direction: column;
             }
-            </style>
-    </head>
+
+            .imgleft, .textright {
+                max-width: 100%;
+                flex: 100%;
+            }
+
+            .textright {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
 <body>
 
+    <h2><b id="Category">Musicals Highlights</b></h2>
 
-<div>
-    <h2>
-        <b id="Category">Musicals Highlights</b></h2></div>
-              <div class="shows">
-            <div class="imgleft">
-              <img src="../Images/LionKing2.jpg" width="300" height="300"/>
-            </div>
-            <div class="textright">
-                <h3>LION KING</h3>
-                <P>The Lion King tells the story of Simba (Swahili for lion), a lion cub who is to succeed his father, 
-                    Mufasa, as King of the Pride Lands; however, after his paternal uncle Scar kills Mufasa to seize 
-                    the throne, Simba is tricked into believing he was responsible for his father's death and flees 
-                    into exile. After growing up in the company of the carefree outcasts Timon and Pumbaa, Simba receives 
-                    valuable perspective from his childhood friend, Nala, and his shaman, Rafiki, before returning to 
-                    challenge Scar to end his tyranny and take his place in the Circle of Life as the rightful king.</P>
-                <h3>Pantages Theater Hollywood, Until Mar 26, 2023</h3>
-                <a href="BookTicket.html?data=LION KING" id="ticket" onclick="bookticket()">Buy Tickets</a>
-            </div>
-            </div>
-            <div class="shows">
-            <div class="imgleft">
-              <img src="../Images/les.jpg" width="300" height="300"/>
-            </div>
-            <div class="textright">
-                <h3>LES MISERABLES</h3>
-              <p>"Les Misérables" is a musical based on Victor Hugo's novel of the same name. Set in early 19th-century 
-                France, it follows the story of Jean Valjean, a former prisoner who seeks redemption while being pursued 
-                by the ruthless police inspector Javert. The show features iconic songs like "I Dreamed a Dream," "On My 
-                Own," and "Do You Hear the People Sing?" as it explores themes of love, sacrifice, and revolution. With 
-                its epic scale and emotional depth, "Les Misérables" has become one of the most beloved and enduring 
-                musicals of all time.</p>
-                <h3>Pantages Theatre Hollywood, From August 1 - September 10, 2023</h3>
-                <a href="BookTicket.html?data=LES MISERABLES" id="ticket" onclick="bookticket()">Buy Tickets</a>
-            </div>
-            </div>
-            <div class="shows">
-            <div class="imgleft">
-              <img src="../images/six.jpg" width="300" height="300"/>
-            </div>
-            <div class="textright">
-               <h3>SIX</h3>
-              <p>"Six" is a musical that retells the story of Henry VIII's six wives from their own perspective, 
-                through modern pop music and choreography. Each of the queens performs a solo number, showcasing their 
-                unique personalities and experiences. The musical is fast-paced, energetic, and features strong vocal 
-                performances from the cast. It also incorporates themes of female empowerment and solidarity. "Six" has 
-                been praised for its catchy songs, clever lyrics, and clever staging. Overall, "Six" is a fun and fresh 
-                take on a historical story, with a modern twist that appeals to audiences of all ages.</p>
-                     <h3>Pantages Theatre Hollywood, From July 9 - August 10, 2023</h3>
-                     <a href="BookTicket.html?data=SIX" id="ticket" onclick="bookticket()">Buy Tickets</a>
-            </div>
-            </div>
-            
-                
-                  </div>
-                  
-                      <p id="shows" ></p>
-                    
-          
-            
-            </div>
-            <script src="../Javascript/CategoryHighlights.js"></script>
-        </body>
+    <div class="shows">
+        <div class="imgleft">
+            <img src="../Images/LionKing2.jpg" alt="The Lion King">
+        </div>
+        <div class="textright">
+            <h3>LION KING</h3>
+            <p>The Lion King tells the story of Simba (Swahili for lion), a lion cub who is to succeed his father, 
+                Mufasa, as King of the Pride Lands. After Mufasa is killed by his uncle Scar, Simba is tricked into 
+                exile. Years later, encouraged by friends and guided by wisdom, Simba returns to reclaim his rightful 
+                place in the Circle of Life.</p>
+            <h3>Pantages Theater Hollywood, Until Mar 26, 2023</h3>
+            <a href="BookTicket.html?data=LION KING" onclick="bookticket()">Buy Tickets</a>
+        </div>
+    </div>
+
+    <div class="shows">
+        <div class="imgleft">
+            <img src="../Images/les.jpg" alt="Les Misérables">
+        </div>
+        <div class="textright">
+            <h3>LES MISÉRABLES</h3>
+            <p>"Les Misérables" is a musical based on Victor Hugo's novel. It follows Jean Valjean, a former prisoner 
+                seeking redemption, and his relentless pursuer Javert. With beloved songs like "I Dreamed a Dream" and 
+                "Do You Hear the People Sing?", it explores themes of justice, sacrifice, love, and revolution.</p>
+            <h3>Pantages Theatre Hollywood, From August 1 - September 10, 2023</h3>
+            <a href="BookTicket.html?data=LES MISERABLES" onclick="bookticket()">Buy Tickets</a>
+        </div>
+    </div>
+
+    <div class="shows">
+        <div class="imgleft">
+            <img src="../images/six.jpg" alt="SIX the Musical">
+        </div>
+        <div class="textright">
+            <h3>SIX</h3>
+            <p>"Six" is a musical retelling the stories of Henry VIII’s six wives through a modern pop concert. 
+                Each queen takes the mic to share her story in an energetic, empowering format that’s full of catchy 
+                music, witty lyrics, and female solidarity. It’s a fierce and fun feminist take on history.</p>
+            <h3>Pantages Theatre Hollywood, From July 9 - August 10, 2023</h3>
+            <a href="BookTicket.html?data=SIX" onclick="bookticket()">Buy Tickets</a>
+        </div>
+    </div>
+
+    <script src="../Javascript/CategoryHighlights.js"></script>
+</body>
+</html>

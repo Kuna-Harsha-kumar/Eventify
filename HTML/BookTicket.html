@@ -4,71 +4,121 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login page</title>
+    <title>Booking Details</title>
     <link rel="stylesheet" href="..\CSS\Login.css">
     
     <style>
-        input[type=date], input[type=number]{
-            width: 100%;
-    margin: 10px 0;
-    border-radius: 5px;
-    padding: 10px 10px;
-    box-sizing: border-box;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #ffffff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-        a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
+
+        form {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .headingsContainer h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 6px;
+            color: #444;
+        }
+
+        select, input[type="date"], input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            transition: border-color 0.3s ease;
+        }
+
+        select:focus, input:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+        }
+
+        button#BookTicket {
+            width: 100%;
+            padding: 14px;
+            font-size: 17px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button#BookTicket:hover {
+            background-color: #45a049;
+        }
+
+        @media screen and (max-width: 480px) {
+            form {
+                padding: 25px 20px;
             }
-            
+        }
     </style>
-    
 </head>
 <body>
-    <form action="Payment.html" id="form" >
+
+    <form action="Payment.html" id="form">
         <!-- Headings for the form -->
         <div class="headingsContainer">
             <h3>BOOKING DETAILS</h3>
         </div>
-     
+
         <!-- Main container for all inputs -->
         <div class="mainContainer">
             <div>
-            <label><p id="demo"></p> </label>
-            </div> 
-            <br><br>
+                <label><p id="demo"></p></label>
+            </div>
+
             <div class="showtime">
-                <label>Available Show Timings: </label>
-                <select style="width:150px" name="showtime" id="showtime">
+                <label for="showtime">Available Show Timings:</label>
+                <select name="showtime" id="showtime">
                     <option selected value="select">Select</option>
-                   <option value="9:00AM">9:00AM</option>
-                   <option value="2:00AM">2:00PM</option>
-                   <option value="6:00PM">6:00PM</option>
+                    <option value="9:00AM">9:00AM</option>
+                    <option value="2:00PM">2:00PM</option>
+                    <option value="6:00PM">6:00PM</option>
                 </select>
             </div>
-            <br><br>
-            <div class="showdate">
-                <label>Available Show Date: </label>
-                <input style="width:150px" type="date" id="showdate" name="date"/>
-            </div>
-        <br><br>
-        <div class="numberoftickets">
-            <label>Number Of Tickets: </label>
-            <input style="width:150px" type="number" id="nooftickets" name="nooftickets"/>
-        </div>
-        <br><br>
-            <!-- Submit button -->
-            <center><button type="submit" id="BookTicket">Confirm</button></center>
-        </div>
 
+            <div class="showdate">
+                <label for="showdate">Available Show Date:</label>
+                <input type="date" id="showdate" name="date" />
+            </div>
+
+            <div class="numberoftickets">
+                <label for="nooftickets">Number Of Tickets:</label>
+                <input type="number" id="nooftickets" name="nooftickets" min="1" />
+            </div>
+
+            <button type="submit" id="BookTicket">Confirm</button>
+        </div>
     </form>
+
     <script src="../Javascript/BookTicket.js"></script>
 </body>
 </html>

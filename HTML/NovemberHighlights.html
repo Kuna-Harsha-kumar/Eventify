@@ -1,85 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>November</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            .imgleft{
-    max-width: 100%;
-    max-height:100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.textright{
-    font-size: 20px;
-    padding-left: 20px;
-}
-.shows{
-    display: flex;
-  align-items: left;
-  justify-content: left;
-}
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>November</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .shows {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            margin: 20px auto;
+            max-width: 1000px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .imgleft {
+            flex: 1;
+            min-width: 300px;
+            max-width: 300px;
+            overflow: hidden;
+        }
+
+        .imgleft img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .textright {
+            flex: 2;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .textright h3 {
+            margin-top: 0;
+            color: #2980b9;
+        }
+
+        .textright p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #1e8449;
+        }
+
+        @media screen and (max-width: 768px) {
+            .shows {
+                flex-direction: column;
             }
-            </style>
-    </head>
+
+            .imgleft, .textright {
+                max-width: 100%;
+                flex: 100%;
+            }
+
+            .textright {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
 <body>
 
+    <h2><b id="Month">November Highlights</b></h2>
 
-<div>
-    <h2>
-        <b id="Month">November Highlights</b></h2></div>
-              <div class="shows">
-            <div class="imgleft">
-              <img src="../images/beetle.jpg" width="300" height="300"/>
-            </div>
-            <div class="textright">
-                <h3>BEETLEJUICE</h3>
-                <P>"Beetlejuice" is a musical based on the 1988 film of the same name. The story follows the recently 
-                    deceased couple, Barbara and Adam, who are stuck haunting their old house in New England. When a 
-                    new family moves in, the couple tries to scare them off, but their efforts are thwarted by the 
-                    mischievous and chaotic ghost, Beetlejuice. As the story unfolds, Beetlejuice tricks the family 
-                    into letting him take over their lives, but his actions have unintended consequences that threaten 
-                    the very existence of the living and the dead. The musical features an upbeat and energetic score 
-                    with a mix of rock and pop music, as well as spectacular visual effects and choreography that bring 
-                    the world of the afterlife to life on stage.</P>
-                <h3>Pantages Theatre Hollywood ,  From November 11 - 30 , 2023</h3>
-                <a href="BookTicket.html?data=BEETLEJUICE" id="ticket" onclick="bookticket()">Buy Tickets</a>
-            </div>
-            </div>
-            <div class="shows">
-            <div class="imgleft">
-              <img src="../images/antz.jpg" width="300" height="300"/>
-            </div>
-            <div class="textright">
-                <h3>ANTZ</h3>
-              <p>"Antz" is a computer-animated adventure-comedy film released in 1998. The story follows Z, an ant with 
-                individualistic tendencies, who yearns for a life beyond his mundane existence. Z's journey begins when he 
-                falls in love with the beautiful Princess Bala and decides to switch places with his soldier ant friend, 
-                Weaver, to attend a parade where he can see her. However, things go awry when Z inadvertently becomes embroiled 
-                in a plot by the power-hungry General Mandible to launch a war against a neighboring ant colony. The movie 
-                showcases Z's efforts to stop the impending conflict and find his place in the world while also addressing themes 
-                of individuality, conformity, and social hierarchy. The film features a star-studded voice cast, including Woody 
-                Allen, Sharon Stone, Sylvester Stallone, Jennifer Lopez, and Gene Hackman.</p>
-                <h3>Audrey Skirball Kenis Theater , From November 20 - December 30, 2023</h3>
-                <a href="BookTicket.html?data=ANTZ" id="ticket" onclick="bookticket()">Buy Tickets</a>
-            </div>
-            </div>
-                      <p id="shows" ></p>
-                    
-          
-            
-            </div>
-            <script src="../Javascript/Highlights.js"></script>
-        </body>
+    <div class="shows">
+        <div class="imgleft">
+            <img src="../images/beetle.jpg" alt="Beetlejuice">
+        </div>
+        <div class="textright">
+            <h3>BEETLEJUICE</h3>
+            <p>"Beetlejuice" is a musical based on the 1988 film of the same name. The story follows the recently 
+                deceased couple, Barbara and Adam, who are stuck haunting their old house in New England. When a 
+                new family moves in, the couple tries to scare them off, but their efforts are thwarted by the 
+                mischievous and chaotic ghost, Beetlejuice. The musical features an upbeat and energetic score, 
+                spectacular visual effects, and choreography that brings the world of the afterlife to life on stage.</p>
+            <h3>Pantages Theatre Hollywood, From November 11 - 30, 2023</h3>
+            <a href="BookTicket.html?data=BEETLEJUICE" onclick="bookticket()">Buy Tickets</a>
+        </div>
+    </div>
+
+    <div class="shows">
+        <div class="imgleft">
+            <img src="../images/antz.jpg" alt="Antz">
+        </div>
+        <div class="textright">
+            <h3>ANTZ</h3>
+            <p>"Antz" is a computer-animated adventure-comedy film released in 1998. The story follows Z, an ant with 
+                individualistic tendencies who yearns for a life beyond his mundane existence. He falls in love with 
+                Princess Bala and becomes involved in a power struggle against General Mandible. The film addresses 
+                themes of individuality, conformity, and social hierarchy, with a star-studded voice cast including 
+                Woody Allen, Sharon Stone, and Sylvester Stallone.</p>
+            <h3>Audrey Skirball Kenis Theater, From November 20 - December 30, 2023</h3>
+            <a href="BookTicket.html?data=ANTZ" onclick="bookticket()">Buy Tickets</a>
+        </div>
+    </div>
+
+    <script src="../Javascript/Highlights.js"></script>
+</body>
+</html>

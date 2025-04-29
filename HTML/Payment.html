@@ -6,65 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login page</title>
     <link rel="stylesheet" href="..\CSS\Login.css">
-  
     <style>
-          input[type=date], input[type=number], input[type=text]{
-            width: 100%;
-    margin: 10px 0;
-    border-radius: 5px;
-    padding: 10px 10px;
-    box-sizing: border-box;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
         }
-        a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
+
+        form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .headingsContainer h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        input[type=date],
+        input[type=number],
+        input[type=text] {
+            width: 100%;
+            margin: 10px 0;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        button#payment {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 14px 0;
+            width: 100%;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button#payment:hover {
+            background-color: #45a049;
+        }
+
+        @media screen and (max-width: 480px) {
+            form {
+                padding: 20px;
             }
+        }
     </style>
 </head>
 <body>
     <form id="form1" action="">
-        <!-- Headings for the form -->
         <div class="headingsContainer">
             <h3>PAYMENT DETAILS</h3>
         </div>
-
-        <!-- Main container for all inputs -->
         <div class="mainContainer">
-            
-            <br><br>
             <div class="CardName">
-                <label>Name on the card </label><br>
-                <input  type="text" name="name" required/>
+                <label>Name on the card</label>
+                <input type="text" name="name" required />
             </div>
-        <br><br>
-        <div class="CardNumber">
-            <label>Card Number</label><br>
-            <input  type="text" name="number" required/>
-        </div>
-        <br><br>
-        <div class="Expirationdate">
-            <label>Expiration Date</label><br>
-            <input  type="date" name="date" required/>
-        </div>
-        <br><br>
-        <div class="CVV">
-            <label>CVV</label><br>
-            <input type="text" name="cvv" required/>
-        </div>
-        <br><br>
-            <!-- Submit button -->
-            <center><button type="submit" id="payment">Submit</button></center>
-       
-        </div>
 
+            <div class="CardNumber">
+                <label>Card Number</label>
+                <input type="text" name="number" required />
+            </div>
+
+            <div class="Expirationdate">
+                <label>Expiration Date</label>
+                <input type="date" name="date" required />
+            </div>
+
+            <div class="CVV">
+                <label>CVV</label>
+                <input type="text" name="cvv" required />
+            </div>
+
+            <br>
+            <button type="submit" id="payment">Submit</button>
+        </div>
     </form>
     <script src="..\Javascript\Payment.js"></script>
 </body>
