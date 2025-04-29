@@ -27,6 +27,7 @@ body {
   font-family: "Lato", sans-serif;
   /* background-color: aliceblue; */
   background-color: #adc4d7;
+  align-content: center;
 }
 
 .sidenav {

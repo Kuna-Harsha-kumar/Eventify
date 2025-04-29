@@ -2,6 +2,7 @@ body {
   background-color: #5b89ae;
   margin: 0; /* Ensures no scrollbars due to body margin */
   overflow: hidden; /* Prevents scrollbars */
+  text-align: center;
 }
 
 .a {
@@ -21,10 +22,10 @@ h2 {
   top: 10px; /* Adjusts vertical position */
   right: 10px; /* Adjusts horizontal position */
   margin: 0; /* Removes default margin */
-  color: white; /* Optional: Ensures visibility on background */
+  color: black; /* Optional: Ensures visibility on background */
   font-size: 1.2em; /* Optional: Adjust font size */
 }
 
 .logout {
-  display: inline; /* Ensures the span doesn't affect layout */
+  /* display: inline; Ensures the span doesn't affect layout */
 }
