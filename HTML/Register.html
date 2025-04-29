@@ -4,10 +4,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login page</title>
+    <title>Register</title>
     <link rel="stylesheet" href="..\CSS\Login.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .headingsContainer h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .headingsContainer p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 6px;
+            color: #444;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, select:focus {
+            border-color: #ff7e5f;
+            outline: none;
+            box-shadow: 0 0 5px rgba(255, 126, 95, 0.3);
+        }
+
+        .registerbtn {
+            width: 100%;
+            padding: 14px;
+            font-size: 17px;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .registerbtn:hover {
+            background-color: #feb47b;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signin a {
+            color: #ff7e5f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .signin a:hover {
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+        }
+
+        p a {
+            color: #ff7e5f;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 480px) {
+            form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
+
     <form id="form">
         <!-- Headings for the form -->
         <div class="headingsContainer">
@@ -18,48 +128,37 @@
         <!-- Main container for all inputs -->
         <div class="mainContainer">
             <label for="username">Username</label>
-            <input type="text" placeholder="Enter Email" id="username" required>
+            <input type="text" placeholder="Enter Username" id="username" required>
 
-            <br><br>
-            <!-- Username -->
-            <label for="Emailid">Email</label>
+            <label for="emailid">Email</label>
             <input type="email" placeholder="Enter Email" id="emailid" required>
 
-            <br><br>
-
-            <!-- Password -->
-            <label for="pswrd">password</label>
+            <label for="pswrd">Password</label>
             <input type="password" placeholder="Enter Password" id="pswrd" required>
 
-            <!-- sub container for the checkbox and forgot password link -->
-            <label for="pswrd2">Retype-password</label>
+            <label for="pswrd2">Retype Password</label>
             <input type="password" placeholder="Re-Type Password" id="pswrd2" required>
 
             <div class="registeras">
                 <label>Register as: </label>
-                <select style="width:150px" name="registeras" id="registeras">
+                <select name="registeras" id="registeras">
                     <option selected value="select">Select</option>
-                   <option value="Admin">Admin</option>
-                   <option value="User">User</option>
+                    <option value="Admin">Admin</option>
+                    <option value="User">User</option>
                 </select>
             </div>
-            <br>
-            <!-- Submit button -->
+
             <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
-            <center><button type="submit" class="registerbtn">Register</button></center>
-            </div>
-  
-  <div class="container signin">
-    <center><p class="login">Already have an account? <a href="Login.html">Sign in</a>.</p></center>
-  </div>
-
-            <!-- Sign up link -->
-        
-
+            <button type="submit" class="registerbtn">Register</button>
         </div>
 
+        <div class="container signin">
+            <p class="login">Already have an account? <a href="Login.html">Sign in</a>.</p>
+        </div>
     </form>
+
     <script src="../Javascript/Register.js"></script>
+
 </body>
 </html>
