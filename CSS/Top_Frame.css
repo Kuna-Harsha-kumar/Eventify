@@ -1,13 +1,13 @@
-body{
-    background-color: black;
+body {
+  background-color: black;
 }
 
-.a{
-    color: red;  
+.a {
+  color: rgb(255, 0, 21);
 }
-.b{
-    color: white;
+.b {
+  color: white;
 }
-h3{
-    color:rgb(204, 201, 197)
+h3 {
+  color: rgb(204, 201, 197);
 }
