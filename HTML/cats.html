@@ -1,41 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Cats</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cats</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h3 {
+            color: #222;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin: 0 auto 20px auto;
+            text-align: justify;
+            max-width: 800px;
+        }
+
+        /* Header and Image Styling */
+        .header-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .mySlides {
+            width: 80%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 40px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 1000px;
+            overflow: hidden;
+        }
+
+        /* Button Styling */
+        a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mySlides {
+                width: 90%;
+                height: auto;
             }
-            </style>
-    </head>
-    <body>
-        <center><img class="mySlides" src="../Images\cats.jpg" width="80%" height="300" > </center>
+
+            h3 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            a {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-container">
+        <img class="mySlides" src="../Images/cats.jpg" alt="Cats Musical">
         <h3>WHY WATCH CATS?</h3>
+    </div>
+
+    <section>
         <h3>ONCE UPON A TIME</h3>
-        <P>"Cats" is a whimsical and visually stunning musical that offers a unique and imaginative take 
-            on the world of cats. The film has been both praised and criticized for its use of computer-
-            generated effects to create the feline characters, and for its overall plot and pacing. 
-            However, fans of the musical and lovers of musical theater in general may still find the film 
-            to be an enjoyable and entertaining experience.</P>
-        <H3>WHAT'S THE STORY?</H3>
-        <P>The movie "Cats" is based on the popular stage musical of the same name by Andrew Lloyd Webber, 
-            which is in turn based on a collection of poems by T.S. Eliot. The story revolves around a 
-            group of cats known as the Jellicles, who gather together for their annual Jellicle Ball, 
-            where they must make the case for why they deserve to be chosen to ascend to the Heaviside 
-            Layer and be reincarnated into a new life.</P>
-        <H3>Fred Kavil Theater, From August 11 - 14, 2023</H3>
-        <a href="BookTicket.html?data=Cats" id="ticket" onclick="bookticket()">Buy Tickets</a>
-    </body>
+        <p>"Cats" is a whimsical and visually stunning musical that offers a unique and imaginative take on the world of cats. 
+            The film has been both praised and criticized for its use of computer-generated effects to create the feline characters, 
+            and for its overall plot and pacing. However, fans of the musical and lovers of musical theater in general may still 
+            find the film to be an enjoyable and entertaining experience.</p>
+    </section>
+
+    <section>
+        <h3>WHAT'S THE STORY?</h3>
+        <p>The movie "Cats" is based on the popular stage musical of the same name by Andrew Lloyd Webber, which is in turn 
+            based on a collection of poems by T.S. Eliot. The story revolves around a group of cats known as the Jellicles, 
+            who gather together for their annual Jellicle Ball, where they must make the case for why they deserve to be chosen 
+            to ascend to the Heaviside Layer and be reincarnated into a new life.</p>
+    </section>
+
+    <section>
+        <h3>Fred Kavli Theater, From August 11 - 14, 2023</h3>
+        <div class="btn-container">
+            <a href="BookTicket.html?data=Cats" id="ticket" onclick="bookticket()">Buy Tickets</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 Cats Musical | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+    </footer>
+
     <script src="../Javascript/BookTicket.js"></script>
+</body>
 </html>

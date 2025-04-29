@@ -1,45 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Los Angeles Opera - Otello</A></A></title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
-            }
-            </style>
-    </head>
-    <body>
-        <center><img class="mySlides" src="../Images\los.jpg" width="80%" height="300" > </center>
-        <h3>WHY WATCH LOS ANGELES OPERA - OTELLO ?</h3>
-        <h3>ONCE UPON A TIME</h3>
-        <P>The opera is known for its powerful score, which features sweeping melodies, lush orchestration, and 
-            dramatic choral passages. The vocal parts are demanding, particularly for the lead roles of Otello 
-            and Iago, and require singers with a strong dramatic presence.The production of Otello by Los Angeles 
-            Opera is known for its impressive staging and design, which brings the story to life with rich and 
-            vivid imagery. The production features a cast of world-class opera singers, as well as a full orchestra 
-            and chorus.Los Angeles Opera is one of the premier opera companies in the United States, known for its 
-            commitment to producing innovative and engaging productions of classic operas. Otello is just one example 
-            of the company's dedication to bringing the best in operatic art to audiences in Los Angeles and beyond.</P>
-        <H3>WHAT'S THE STORY?</H3>
-        <P>Los Angeles Opera's Otello is an operatic adaptation of Shakespeare's classic tragedy, Othello. It was 
-            composed by Italian composer Giuseppe Verdi, with a libretto by Arrigo Boito. The opera tells the story 
-            of the Moorish general Otello, who is tricked into believing that his wife, Desdemona, has been unfaithful. 
-            The deceit is carried out by Otello's trusted advisor, Iago, who is jealous of Otello's relationship with 
-            Desdemona.</P>
-        <H3>Dorothy Chandler Pavilion, From May 13 - June 4, 2023</H3>
-        <a href="BookTicket.html?data=Los Angeles Opera - Otello" id="ticket" onclick="bookticket()">Buy Tickets</a>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Los Angeles Opera - Otello</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    </body>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h3 {
+            color: #4CAF50;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            text-align: justify;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Image Styling */
+        .mySlides {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .mySlides:hover {
+            transform: scale(1.05);
+        }
+
+        /* Button Styling */
+        a {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px auto;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 200px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: block;
+        }
+
+        a:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        a:focus {
+            outline: none;
+        }
+
+        /* Section Styling */
+        .section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .section h3 {
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h3 {
+                font-size: 20px;
+            }
+
+            .section h3 {
+                font-size: 22px;
+            }
+
+            .section p {
+                font-size: 16px;
+            }
+
+            a {
+                width: 180px;
+                padding: 12px 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Image Slider -->
+    <center>
+        <img class="mySlides" src="../Images/los.jpg" alt="Los Angeles Opera" width="80%" height="300">
+    </center>
+
+    <!-- Main Content -->
+    <div class="section">
+        <h3>WHY WATCH LOS ANGELES OPERA - OTELLO?</h3>
+        <p>
+            The opera is known for its powerful score, which features sweeping melodies, lush orchestration, and dramatic choral passages. The vocal parts are demanding, particularly for the lead roles of Otello and Iago, and require singers with a strong dramatic presence. The production of Otello by Los Angeles Opera is known for its impressive staging and design, which brings the story to life with rich and vivid imagery. The production features a cast of world-class opera singers, as well as a full orchestra and chorus. Los Angeles Opera is one of the premier opera companies in the United States, known for its commitment to producing innovative and engaging productions of classic operas. Otello is just one example of the company's dedication to bringing the best in operatic art to audiences in Los Angeles and beyond.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>WHAT'S THE STORY?</h3>
+        <p>
+            Los Angeles Opera's Otello is an operatic adaptation of Shakespeare's classic tragedy, Othello. It was composed by Italian composer Giuseppe Verdi, with a libretto by Arrigo Boito. The opera tells the story of the Moorish general Otello, who is tricked into believing that his wife, Desdemona, has been unfaithful. The deceit is carried out by Otello's trusted advisor, Iago, who is jealous of Otello's relationship with Desdemona.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Dorothy Chandler Pavilion, From May 13 - June 4, 2023</h3>
+        <a href="BookTicket.html?data=Los Angeles Opera - Otello" id="ticket" onclick="bookticket()">Buy Tickets</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Los Angeles Opera. All rights reserved. 
+            
+    </footer>
+
     <script src="../Javascript/BookTicket.js"></script>
+</body>
 </html>

@@ -1,103 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>March</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            .imgleft{
-    max-width: 100%;
-    max-height:100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.textright{
-    font-size: 20px;
-    padding-left: 20px;
-}
-.shows{
-    display: flex;
-  align-items: left;
-  justify-content: left;
-}
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>March Highlights</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            padding: 20px;
+            font-size: 16px;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Heading Styling */
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        #month {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        /* Show Container */
+        .shows {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        /* Image Styling */
+        .imgleft {
+            max-width: 100%;
+            max-height: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imgleft img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .imgleft img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Text Block Styling */
+        .textright {
+            padding-left: 20px;
+            flex: 1;
+            max-width: 60%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .textright h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .textright p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .textright a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .textright a:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .shows {
+                flex-direction: column;
+                align-items: center;
             }
-            </style>
-    </head>
+
+            .textright {
+                max-width: 100%;
+                padding-left: 0;
+                text-align: center;
+            }
+
+            .textright a {
+                width: 100%;
+            }
+
+            .imgleft img {
+                width: 100%;
+            }
+        }
+
+        /* Enhancing the look of the overall page */
+        .shows {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        .shows:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
 <body>
 
+    <div class="main-container">
+        <h2>
+            <b id="month">March Highlights</b>
+        </h2>
 
-<div>
-    <h2>
-        <b id="month">March Highlights</b></h2></div>
-              <div class="shows">
+        <!-- Lion King Show -->
+        <div class="shows">
             <div class="imgleft">
-              <img src="../Images/LionKing2.jpg" width="300" height="300"/>
+                <img src="../Images/LionKing2.jpg" alt="Lion King">
             </div>
             <div class="textright">
                 <h3>LION KING</h3>
-                <P>The Lion King tells the story of Simba (Swahili for lion), a lion cub who is to succeed his father, 
+                <p>The Lion King tells the story of Simba (Swahili for lion), a lion cub who is to succeed his father, 
                     Mufasa, as King of the Pride Lands; however, after his paternal uncle Scar kills Mufasa to seize 
                     the throne, Simba is tricked into believing he was responsible for his father's death and flees 
                     into exile. After growing up in the company of the carefree outcasts Timon and Pumbaa, Simba receives 
                     valuable perspective from his childhood friend, Nala, and his shaman, Rafiki, before returning to 
-                    challenge Scar to end his tyranny and take his place in the Circle of Life as the rightful king.</P>
+                    challenge Scar to end his tyranny and take his place in the Circle of Life as the rightful king.
+                </p>
                 <h3>Pantages Theater Hollywood, Until Mar 26, 2023</h3>
                 <a href="BookTicket.html?data=LION KING" id="ticket" onclick="bookticket()">Buy Tickets</a>
             </div>
-            </div>
-            <div class="shows">
+        </div>
+
+        <!-- Bill Burr Show -->
+        <div class="shows">
             <div class="imgleft">
-              <img src="../Images/BillBurr.jpg" width="300" height="300"/>
+                <img src="../Images/BillBurr.jpg" alt="Bill Burr">
             </div>
             <div class="textright">
                 <h3>BILL BURR</h3>
-              <p>William Frederick Burr (born June 10, 1968) is an American stand-up comedian, actor, filmmaker, and podcaster.
-                He has released multiple stand-up comedy specials, most notably Why Do I Do This? (2008), 
-                Let It Go (2010), You People Are All the Same (2012), I'm Sorry You Feel That Way (2014), 
-                Walk Your Way Out (2017), Paper Tiger (2019), and Live at Red Rocks (2022). 
-                He received a Grammy Award for Best Comedy Album nomination for Paper Tiger, and 
-                a Primetime Emmy Award for Outstanding Actor in a Short Form Comedy or Drama Series 
-                nomination for the dark comedy series Immoral Compass (2021–present). In 2017, 
-                Rolling Stone ranked Burr No. 17 in their "50 Best Stand Up Comics of All Time"</p>
+                <p>William Frederick Burr (born June 10, 1968) is an American stand-up comedian, actor, filmmaker, and podcaster.
+                    He has released multiple stand-up comedy specials, most notably Why Do I Do This? (2008), 
+                    Let It Go (2010), You People Are All the Same (2012), I'm Sorry You Feel That Way (2014), 
+                    Walk Your Way Out (2017), Paper Tiger (2019), and Live at Red Rocks (2022). 
+                    He received a Grammy Award for Best Comedy Album nomination for Paper Tiger, and 
+                    a Primetime Emmy Award for Outstanding Actor in a Short Form Comedy or Drama Series 
+                    nomination for the dark comedy series Immoral Compass (2021–present). In 2017, 
+                    Rolling Stone ranked Burr No. 17 in their "50 Best Stand Up Comics of All Time"
+                </p>
                 <h3>Wilshire Ebell Theatre, Mar 21, 2023</h3>
                 <a href="BookTicket.html?data=BILL BURR" id="ticket" onclick="bookticket()">Buy Tickets</a>
             </div>
-            </div>
-            <div class="shows">
+        </div>
+
+        <!-- Fiddler on the Roof Show -->
+        <div class="shows">
             <div class="imgleft">
-              <img src="../Images/FiddlerontheRoof.jpg" width="300" height="300"/>
+                <img src="../Images/FiddlerontheRoof.jpg" alt="Fiddler on the Roof">
             </div>
             <div class="textright">
-                <H3>FIDDLER ON THE ROOF</H3>
-                <P>Fiddler on the Roof is a musical with music by Jerry Bock, lyrics by Sheldon Harnick, 
+                <h3>FIDDLER ON THE ROOF</h3>
+                <p>Fiddler on the Roof is a musical with music by Jerry Bock, lyrics by Sheldon Harnick, 
                     and book by Joseph Stein, set in the Pale of Settlement of Imperial Russia in or around 1905. 
                     It is based on Tevye and his Daughters (or Tevye the Dairyman) and other tales by Sholem Aleichem. 
                     The story centers on Tevye, a milkman in the village of Anatevka, who attempts to maintain his 
                     Jewish religious and cultural traditions as outside influences encroach upon his family's lives.
-                     He must cope with the strong-willed actions of his three older daughters who wish to marry for love; 
-                     their choices of husbands are successively less palatable for Tevye. An edict of the tsar eventually 
-                     evicts the Jews from their village.</P>
-                     <h3>Fox Performing Arts Center, Mar 29 - 30, 2023</h3>
-                     <a href="BookTicket.html?data=FIDDLER ON THE ROOF" id="ticket" onclick="bookticket()">Buy Tickets</a>
+                    He must cope with the strong-willed actions of his three older daughters who wish to marry for love; 
+                    their choices of husbands are successively less palatable for Tevye. An edict of the tsar eventually 
+                    evicts the Jews from their village.
+                </p>
+                <h3>Fox Performing Arts Center, Mar 29 - 30, 2023</h3>
+                <a href="BookTicket.html?data=FIDDLER ON THE ROOF" id="ticket" onclick="bookticket()">Buy Tickets</a>
             </div>
-            </div>
-                  </div>
-                  
-                      <p id="shows" ></p>
-                    
-          
-            
-            </div>
-            <script src="../Javascript/Highlights.js"></script>
-        </body>
+        </div>
+    </div>
+
+    <script src="../Javascript/Highlights.js"></script>
+</body>
+</html>

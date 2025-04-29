@@ -1,43 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Beetlejuice</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
-            }
-            </style>
-    </head>
-    <body>
-        <center><img class="mySlides" src="../Images\beetle.jpg" width="80%" height="300" > </center>
-        <h3>WHY WATCH BEETLEJUICE?</h3>
-        <h3>ONCE UPON A TIME</h3>
-        <P>"Beetlejuice" is a dark comedy film released in 1988, directed by Tim Burton and starring Michael 
-            Keaton in the titular role. The film is known for its quirky and offbeat humor, as well as its 
-            innovative special effects and gothic visual style. It also features a memorable musical score by 
-            composer Danny Elfman, which has become a cult classic in its own right."Beetlejuice" was a 
-            commercial and critical success upon its release, and has since become a beloved classic in the 
-            horror-comedy genre. It has also inspired various spin-offs, including a Broadway musical adaptation 
-            that premiered in 2019.</P>
-        <H3>WHAT'S THE STORY?</H3>
-        <P>The film follows a recently deceased couple, Barbara and Adam Maitland, who become ghosts and are 
-            trapped in their home in Connecticut.Desperate to escape, they seek the help of a "bio-exorcist" 
-            named Beetlejuice, who claims he can help them scare away the living family who has moved into 
-            their home. However, the Maitlands soon discover that Beetlejuice is far from trustworthy, and 
-            chaos ensues as he wreaks havoc on both the living and the dead.</P>
-        <H3>Pantages Theater Hollywood, from November 11 - 30, 2023</H3>
-        <a href="BookTicket.html?data=Beetlejuice" id="ticket" onclick="bookticket()">Buy Tickets</a>
-    </body>
-    <script src="../Javascript/BookTicket.js"></script>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beetlejuice</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h3 {
+      color: #8e44ad;
+      font-size: 28px;
+      margin-top: 30px;
+      text-transform: uppercase;
+    }
+
+    p {
+      max-width: 900px;
+      margin: 20px auto;
+      font-size: 18px;
+      color: #555;
+      padding: 0 10px;
+    }
+
+    /* Image Styling */
+    img.mySlides {
+      width: 85%;
+      max-width: 1000px;
+      height: auto;
+      border-radius: 12px;
+      margin: 30px auto 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Button Styling */
+    a {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 35px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 30px auto;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #43a047;
+      transform: translateY(-2px);
+    }
+
+    a:active {
+      transform: scale(0.98);
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+      h3 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      a {
+        font-size: 16px;
+        padding: 12px 25px;
+      }
+
+      img.mySlides {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img class="mySlides" src="../Images/beetle.jpg" alt="Beetlejuice Poster">
+
+  <h3>Why Watch Beetlejuice?</h3>
+  <h3>Once Upon a Time</h3>
+  <p>
+    "Beetlejuice" is a dark comedy film released in 1988, directed by Tim Burton and starring Michael Keaton in the titular role. 
+    The film is known for its quirky and offbeat humor, as well as its innovative special effects and gothic visual style. 
+    It also features a memorable musical score by composer Danny Elfman, which has become a cult classic in its own right. 
+    "Beetlejuice" was a commercial and critical success upon its release, and has since become a beloved classic in the horror-comedy genre. 
+    It has also inspired various spin-offs, including a Broadway musical adaptation that premiered in 2019.
+  </p>
+
+  <h3>What's the Story?</h3>
+  <p>
+    The film follows a recently deceased couple, Barbara and Adam Maitland, who become ghosts and are trapped in their home in Connecticut.
+    Desperate to escape, they seek the help of a "bio-exorcist" named Beetlejuice, who claims he can help them scare away the living family 
+    who has moved into their home. However, the Maitlands soon discover that Beetlejuice is far from trustworthy, and chaos ensues as he 
+    wreaks havoc on both the living and the dead.
+  </p>
+
+  <h3>Pantages Theater Hollywood, from November 11 - 30, 2023</h3>
+  <a href="BookTicket.html?data=Beetlejuice" id="ticket" onclick="bookticket()">Buy Tickets</a>
+
+  <script src="../Javascript/BookTicket.js"></script>
+</body>
 </html>

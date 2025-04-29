@@ -1,55 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Bruce Springsteen</A></A></title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
-            }
-            </style>
-    </head>
-    <body>
-        <center><img class="mySlides" src="../Images\bruce.jpg" width="80%" height="300" > </center>
-        <h3>WHY WATCH BRUCE SPRINGSTEEN ?</h3>
-        <h3>ONCE UPON A TIME</h3>
-        <P>Springsteen is known for his incredible live shows, which often last for several hours and feature high-
-            energy performances of his most popular songs. Springsteen is known for his incredible live shows, 
-            which often last for several hours and feature high-energy performances of his most popular songs.
-            Springsteen is widely regarded as one of the greatest rock musicians of all time, and has been inducted 
-            into the Rock and Roll Hall of Fame. Springsteen's music and activism have inspired countless people 
-            around the world, and he has been a powerful voice for social justice and progressive causes. 
-            Springsteen has released over 20 albums and has been making music for over five decades, meaning there 
-            is a wealth of material for fans to explore and enjoy. Overall, watching Bruce Springsteen can be a 
-            thrilling and inspiring experience, whether you are a die-hard fan or just discovering his music for 
-            the first time.</P>
-        <H3>WHAT'S THE STORY?</H3>
-        <P>Bruce Springsteen is an American singer, songwriter, and musician who has been active in the music industry 
-            for over five decades. He was born in New Jersey in 1949 and began playing guitar at a young age. In the 
-            early 1970s, he formed a band called The E Street Band and began performing in the local New Jersey music 
-            scene.Springsteen's breakthrough came in 1975 with the release of his third album, "Born to Run," which 
-            became a massive commercial success and established him as a major figure in rock music. Throughout his 
-            career, Springsteen has released a string of critically acclaimed albums, including "Darkness on the Edge 
-            of Town," "The River," "Nebraska," and "Born in the U.S.A."Springsteen's music is known for its themes of 
-            working-class struggle, social and political commentary, and a sense of longing for something better. His 
-            live performances are legendary, with Springsteen often playing marathon shows that can last for several 
-            hours.In addition to his music, Springsteen is also known for his activism and philanthropy. He has been 
-            involved in various causes over the years, including anti-war efforts, hunger relief, and support for 
-            veterans.Overall, Bruce Springsteen is a highly respected and influential figure in the world of music, 
-            known for his powerful lyrics, captivating live shows, and unwavering commitment to social justice.</P>
-        <H3>The Forum, From December 4 - 6, 2023</H3>
-        <a href="BookTicket.html?data=Bruce Springsteen" id="ticket" onclick="bookticket()">Buy Tickets</a>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bruce Springsteen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
 
-    </body>
+        h3 {
+            color: #222;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin: 0 auto 20px auto;
+            text-align: justify;
+            max-width: 800px;
+        }
+
+        /* Header and Image Styling */
+        .header-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .mySlides {
+            width: 80%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 40px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 1000px;
+            overflow: hidden;
+        }
+
+        /* Button Styling */
+        a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mySlides {
+                width: 90%;
+                height: auto;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            a {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-container">
+        <img class="mySlides" src="../Images/bruce.jpg" alt="Bruce Springsteen Concert">
+        <h3>WHY WATCH BRUCE SPRINGSTEEN?</h3>
+    </div>
+
+    <section>
+        <h3>ONCE UPON A TIME</h3>
+        <p>Springsteen is known for his incredible live shows, which often last for several hours and feature high-energy 
+            performances of his most popular songs. He is widely regarded as one of the greatest rock musicians of all time 
+            and has been inducted into the Rock and Roll Hall of Fame. His music and activism have inspired countless people 
+            around the world, and he has been a powerful voice for social justice and progressive causes. With over 20 albums 
+            released and a legacy spanning over five decades, watching Bruce Springsteen perform live is a thrilling and 
+            inspiring experience for die-hard fans and new listeners alike.</p>
+    </section>
+
+    <section>
+        <h3>WHAT'S THE STORY?</h3>
+        <p>Bruce Springsteen is an American singer, songwriter, and musician born in New Jersey in 1949. He began performing 
+            locally and gained fame with his band, The E Street Band, in the 1970s. His breakthrough came with "Born to Run" 
+            in 1975. He continued his rise with albums like "The River," "Nebraska," and "Born in the U.S.A." Known for 
+            marathon live shows and poignant lyrics about working-class struggles and hope, Springsteen has remained a 
+            powerful figure in rock music. His dedication to activism and philanthropy adds depth to his public image, 
+            making him not only a legendary performer but also a respected humanitarian.</p>
+    </section>
+
+    <section>
+        <h3>The Forum, From December 4 - 6, 2023</h3>
+        <div class="btn-container">
+            <a href="BookTicket.html?data=Bruce Springsteen" id="ticket" onclick="bookticket()">Buy Tickets</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 Bruce Springsteen Live | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+    </footer>
+
     <script src="../Javascript/BookTicket.js"></script>
+</body>
 </html>

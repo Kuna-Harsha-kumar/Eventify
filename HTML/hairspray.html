@@ -1,46 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Hairspray</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hairspray</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Body and General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Main Content Area Styling */
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Centered Image */
+        .mySlides {
+            width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        /* Title Styling */
+        h3 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Button Styling */
+        a {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h3 {
+                font-size: 1.5rem;
             }
-            </style>
-    </head>
-    <body>
-        <center><img class="mySlides" src="../Images\hairspray.jpg" width="80%" height="300" > </center>
+
+            p {
+                font-size: 1rem;
+            }
+
+            .mySlides {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <center>
+            <img class="mySlides" src="../Images/hairspray.jpg" alt="Hairspray Movie Poster">
+        </center>
         <h3>WHY WATCH HAIRSPRAY?</h3>
-        <h3>ONCE UPON A TIME</h3>
-        <P>The movie "Hairspray" is a musical comedy based on the 2002 Broadway musical of the same name, 
-            which was in turn based on the 1988 film by John Waters. Set in Baltimore in the 1960s. The 
-            film is filled with catchy musical numbers and lively dance sequences, as well as humor and 
-            heart. Ultimately, "Hairspray" is a story about the power of inclusivity, acceptance, and 
-            standing up for what is right, and it offers a fun and inspiring message that is sure to 
-            resonate with audiences of all ages.</P>
-        <H3>WHAT'S THE STORY?</H3>
-        <P>The movie "Hairspray" ells the story of Tracy Turnblad, a teenage girl who dreams of dancing on 
-            "The Corny Collins Show," a popular local TV dance program. Despite facing discrimination and 
-            ridicule for her size and unconventional appearance, Tracy is determined to achieve her dream, 
-            and she begins to attend auditions for the show. Along the way, she makes new friends, including 
-            a group of African American students who are fighting for integration and equal rights. As 
-            Tracy's star rises on the show, she becomes increasingly involved in the civil rights movement 
-            and begins to use her newfound platform to advocate for change. However, she faces opposition 
-            from the show's producer, Velma Von Tussle, and her scheming daughter, Amber, who are determined 
-            to maintain the status quo and keep the show segregated.</P>
-        <H3>Dolby Theater, From August 2 - 21, 2023</H3>
+        <p>"Hairspray" is a musical comedy based on the 2002 Broadway musical of the same name, 
+           which was in turn based on the 1988 film by John Waters. Set in Baltimore in the 1960s, the 
+           film is filled with catchy musical numbers and lively dance sequences, as well as humor and 
+           heart. Ultimately, "Hairspray" is a story about the power of inclusivity, acceptance, and 
+           standing up for what is right. It offers a fun and inspiring message that is sure to 
+           resonate with audiences of all ages.</p>
+
+        <h3>WHAT'S THE STORY?</h3>
+        <p>The movie "Hairspray" tells the story of Tracy Turnblad, a teenage girl who dreams of dancing on 
+           "The Corny Collins Show," a popular local TV dance program. Despite facing discrimination and 
+           ridicule for her size and unconventional appearance, Tracy is determined to achieve her dream. 
+           She begins attending auditions for the show and makes new friends, including a group of African American 
+           students fighting for integration and equal rights. As Tracy's star rises on the show, she becomes increasingly 
+           involved in the civil rights movement and uses her newfound platform to advocate for change. However, 
+           she faces opposition from the show's producer, Velma Von Tussle, and her scheming daughter Amber, 
+           who are determined to maintain the status quo and keep the show segregated.</p>
+
+        <h3>Dolby Theater, From August 2 - 21, 2023</h3>
         <a href="BookTicket.html?data=Hairspray" id="ticket" onclick="bookticket()">Buy Tickets</a>
-    </body>
+    </main>
     <script src="../Javascript/BookTicket.js"></script>
+</body>
 </html>

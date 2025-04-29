@@ -1,49 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>A Little Night Music</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
-            }
-            </style>
-    </head>
-    <body>
-        <center><img class="mySlides" src="../Images\alittle.jpg" width="80%" height="300" > </center>
-        <h3>WHY WATCH A LITTLE NIGHT MUSIC ?</h3>
-        <h3>ONCE UPON A TIME</h3>
-        <P> "A Little Night Music." show is widely regarded as one of the masterpieces of the genre, 
-            with a beautiful score by Stephen Sondheim and a witty and sophisticated book by Hugh 
-            Wheeler. The show features some of Sondheim's most famous and memorable songs, including 
-            "Send in the Clowns," "A Weekend in the Country," and "The Miller's Son." It is a show 
-            that explores complex and timeless themes of love, sex, desire, and regret. The characters 
-            are all flawed and complex, and their relationships are portrayed with nuance and 
-            sensitivity. As such, the show offers a thought-provoking and emotionally engaging 
-            experience that is sure to resonate with audiences. "A Little Night Music" is a classic of 
-            musical theater that has been praised by critics and audiences alike for decades. The show 
-            has been revived numerous times and has won multiple Tony Awards, cementing its place as a 
-            beloved and enduring part of the musical theater canon.</P>
-        <H3>WHAT'S THE STORY?</H3>
-        <P>"A Little Night Music" is a musical with music and lyrics by Stephen Sondheim and a book by 
-            Hugh Wheeler. The show is based on the 1955 Ingmar Bergman film "Smiles of a Summer Night" 
-            and tells the story of the romantic entanglements of a group of people over the course of 
-            a weekend in the Swedish countryside. The musical is known for its lush and melodic score, 
-            which includes the famous song "Send in the Clowns," and for its witty and sophisticated 
-            book. The show explores themes of love, sex, jealousy, and regret, and features a cast of 
-            complex and memorable characters.</P>
-        <H3>Pasadena Playhouse, From June 25 - July 21, 2023</H3>
-        <a href="BookTicket.html?data=A Little Night Music" id="ticket" onclick="bookticket()"> Buy Tickets</a>
-    </body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A Little Night Music</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* General reset and box-sizing */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 0 10px;
+      }
+
+      h3 {
+        font-size: 2em;
+        margin: 20px 0;
+        text-align: center;
+        color: #333;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        text-align: justify;
+        padding: 0 15px;
+      }
+
+      /* Image styling */
+      .mySlides {
+        width: 80%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+      }
+
+      /* Button styling */
+      a {
+        display: inline-block;
+        background-color: #4caf50;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 5px;
+        margin: 20px auto;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      a:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+      }
+
+      /* Container to center content and make it responsive */
+      .container {
+        max-width: 1200px;
+        width: 90%;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Responsive design for smaller screens */
+      @media (max-width: 768px) {
+        h3 {
+          font-size: 1.6em;
+        }
+
+        p {
+          font-size: 1em;
+        }
+
+        .mySlides {
+          width: 100%;
+        }
+
+        a {
+          width: 100%;
+          padding: 12px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <center>
+        <img
+          class="mySlides"
+          src="../Images/alittle.jpg"
+          alt="A Little Night Music"
+          width="80%"
+          height="300"
+        />
+      </center>
+      <h3>WHY WATCH A LITTLE NIGHT MUSIC?</h3>
+      <h3>ONCE UPON A TIME</h3>
+      <p>
+        "A Little Night Music." show is widely regarded as one of the masterpieces
+        of the genre, with a beautiful score by Stephen Sondheim and a witty and
+        sophisticated book by Hugh Wheeler. The show features some of Sondheim's
+        most famous and memorable songs, including "Send in the Clowns," "A
+        Weekend in the Country," and "The Miller's Son." It is a show that explores
+        complex and timeless themes of love, sex, desire, and regret. The characters
+        are all flawed and complex, and their relationships are portrayed with nuance
+        and sensitivity. As such, the show offers a thought-provoking and emotionally
+        engaging experience that is sure to resonate with audiences. "A Little Night
+        Music" is a classic of musical theater that has been praised by critics and
+        audiences alike for decades. The show has been revived numerous times and
+        has won multiple Tony Awards, cementing its place as a beloved and enduring
+        part of the musical theater canon.
+      </p>
+      <h3>WHAT'S THE STORY?</h3>
+      <p>
+        "A Little Night Music" is a musical with music and lyrics by Stephen
+        Sondheim and a book by Hugh Wheeler. The show is based on the 1955 Ingmar
+        Bergman film "Smiles of a Summer Night" and tells the story of the romantic
+        entanglements of a group of people over the course of a weekend in the Swedish
+        countryside. The musical is known for its lush and melodic score, which includes
+        the famous song "Send in the Clowns," and for its witty and sophisticated book.
+        The show explores themes of love, sex, jealousy, and regret, and features a cast
+        of complex and memorable characters.
+      </p>
+      <h3>Pasadena Playhouse, From June 25 - July 21, 2023</h3>
+      <a href="BookTicket.html?data=A Little Night Music" id="ticket" onclick="bookticket()">
+        Buy Tickets
+      </a>
+    </div>
+
     <script src="../Javascript/BookTicket.js"></script>
+  </body>
 </html>

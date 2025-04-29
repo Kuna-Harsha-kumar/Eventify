@@ -1,89 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>April</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            .imgleft{
-    max-width: 100%;
-    max-height:100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.textright{
-    font-size: 20px;
-    padding-left: 20px;
-}
-.shows{
-    display: flex;
-  align-items: left;
-  justify-content: left;
-}
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
-            }
-            </style>
-    </head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>April</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 36px;
+      color: #2c3e50;
+      margin-bottom: 40px;
+    }
+
+    .shows {
+      display: flex;
+      background-color: #fff;
+      border-radius: 12px;
+      margin: 30px auto;
+      max-width: 1100px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .shows:hover {
+      transform: translateY(-5px);
+    }
+
+    .imgleft {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+    }
+
+    .imgleft img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .textright {
+      flex: 2;
+      padding: 30px 20px;
+      text-align: left;
+    }
+
+    .textright h3 {
+      color: #8e44ad;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .textright p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    a {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #43a047;
+      transform: translateY(-2px);
+    }
+
+    a:active {
+      transform: scale(0.98);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .shows {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .imgleft,
+      .textright {
+        padding: 20px;
+      }
+
+      .textright {
+        text-align: center;
+      }
+
+      .textright h3 {
+        font-size: 20px;
+      }
+
+      .textright p {
+        font-size: 16px;
+      }
+
+      a {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+
 <body>
 
+  <div>
+    <h2><b id="April">April Highlights</b></h2>
+  </div>
 
-<div>
-    <h2>
-        <b id="April">April Highlights</b></h2></div>
-              <div class="shows">
-            <div class="imgleft">
-              <img src="../images/Russian grand.png" width="300" height="300"/>
-            </div>
-            <div class="textright">
-                <h3>RUSSIAN GRAND BALLET: SWAN LAKE</h3>
-                <P>Russian Grand Ballet's production of "Swan Lake" is a stunning showcase of classical 
-                  ballet at its finest. Featuring world-class dancers and exquisite choreography, this 
-                  timeless tale of love and betrayal comes to life on stage in a dazzling display of 
-                  beauty and grace. From the sweeping, romantic movements of the corps de ballet to the 
-                  powerful and emotional solos of the lead dancers, every moment of this performance is 
-                  breathtaking. The lavish sets and costumes transport the audience to another time and 
-                  place, while Tchaikovsky's timeless score provides the perfect backdrop for this 
-                  timeless story of passion and redemption. Whether you are a lifelong ballet enthusiast 
-                  or simply looking for an unforgettable night out, Russian Grand Ballet's "Swan Lake" is 
-                  a must-see event that is sure to leave you spellbound.</P>
-                <h3>Irvine Barclay Theatre, From April 18 - 19, 2023</h3>
-                <a href="BookTicket.html?data=RUSSIAN GRAND BALLET: SWAN LAKE" id="ticket" onclick="bookticket()">Buy Tickets</a>
-            </div>
-            </div>
-            <div class="shows">
-            <div class="imgleft">
-              <img src="../images/sundayinpark.jpg" width="300" height="300"/>
-            </div>
-            <div class="textright">
-                <h3>SUNDAY IN THE PARK WITH GEORGE</h3>
-              <p>"Sunday in the Park with George" is a powerful musical that explores the relationship 
-                between art, creativity, and human connection. The story follows George Seurat, a 
-                passionate painter who struggles to balance his artistic vision with the demands of his 
-                personal life. As he creates his masterpiece, "A Sunday Afternoon on the Island of La 
-                Grande Jatte," he grapples with love, loss, and the sacrifices that must be made in the 
-                pursuit of greatness. Through a series of hauntingly beautiful songs and poignant scenes, 
-                this musical explores the complexities of the human heart and the enduring power of art to 
-                connect us all. With a cast of talented performers, stunning visuals, and a soaring score, 
-                "Sunday in the Park with George" is an unforgettable theatrical experience that will leave 
-                you moved, inspired, and profoundly transformed.</p>
-                <h3>Pasadena Playhouse, Until April 19, 2023</h3>
-                <a href="BookTicket.html?data=SUNDAY IN THE PARK WITH GEORGE" id="ticket" onclick="bookticket()">Buy Tickets</a>
-            </div>
-            </div>
-                      <p id="shows" ></p>
-                    
-          
-            
-            </div>
-            <script src="../Javascript/Highlights.js"></script>
-        </body>
+  <!-- Show 1 -->
+  <div class="shows">
+    <div class="imgleft">
+      <img src="../images/Russian grand.png" alt="Swan Lake Poster" />
+    </div>
+    <div class="textright">
+      <h3>RUSSIAN GRAND BALLET: SWAN LAKE</h3>
+      <p>
+        Russian Grand Ballet's production of "Swan Lake" is a stunning showcase of classical ballet at its finest.
+        Featuring world-class dancers and exquisite choreography, this timeless tale of love and betrayal comes to life on stage in a dazzling display of beauty and grace.
+        The lavish sets and Tchaikovsky's timeless score provide the perfect backdrop for this unforgettable story of passion and redemption.
+      </p>
+      <h3>Irvine Barclay Theatre, From April 18 - 19, 2023</h3>
+      <a href="BookTicket.html?data=RUSSIAN GRAND BALLET: SWAN LAKE" id="ticket" onclick="bookticket()">Buy Tickets</a>
+    </div>
+  </div>
+
+  <!-- Show 2 -->
+  <div class="shows">
+    <div class="imgleft">
+      <img src="../images/sundayinpark.jpg" alt="Sunday in the Park with George Poster" />
+    </div>
+    <div class="textright">
+      <h3>SUNDAY IN THE PARK WITH GEORGE</h3>
+      <p>
+        "Sunday in the Park with George" is a powerful musical exploring the relationship between art, creativity, and human connection.
+        It follows George Seurat as he paints his masterpiece while navigating personal struggles and emotional complexity.
+        With stunning visuals and a soaring score, this production is a moving tribute to the sacrifices made in the pursuit of artistic greatness.
+      </p>
+      <h3>Pasadena Playhouse, Until April 19, 2023</h3>
+      <a href="BookTicket.html?data=SUNDAY IN THE PARK WITH GEORGE" id="ticket" onclick="bookticket()">Buy Tickets</a>
+    </div>
+  </div>
+
+  <p id="shows"></p>
+
+  <script src="../Javascript/Highlights.js"></script>
+</body>
+</html>

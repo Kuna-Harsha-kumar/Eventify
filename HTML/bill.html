@@ -1,43 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Bill Burr</A></A></title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
-            }
-            </style>
-    </head>
-    <body>
-        <center><img class="mySlides" src="../Images\bill.jpg" width="80%" height="300" > </center>
-        <h3>WHY WATCH BILL BURR?</h3>
-        <h3>ONCE UPON A TIME</h3>
-        <P>Burr's comedy often touches on controversial topics such as race, gender, and politics, and he is 
-            known for his acerbic wit and biting social commentary. He has been praised for his ability to 
-            tackle difficult subjects with honesty and humor, and for his willingness to take risks and push 
-            boundaries. Overall, Bill Burr is a versatile and talented performer with a unique perspective 
-            and a style of comedy that is both edgy and entertaining.</P>
-        <H3>WHAT'S THE STORY?</H3>
-        <P>Bill Burr is an American stand-up comedian, actor, and writer known for his cynical and irreverent 
-            humor. He was born on June 10, 1968, in Canton, Massachusetts, and began his career as a stand-up 
-            comedian in the 1990s. Over the years, he has released several comedy specials and has appeared 
-            in a number of films and television shows. In addition to his stand-up comedy career, Burr has 
-            appeared in a number of films and television shows, including "Breaking Bad," "The Mandalorian," 
-            and "F is for Family," which he also created and executive produced. He has also written for a 
-            number of television shows, including "Chappelle's Show" and "The Daily Show with Jon Stewart."</P>
-        <H3>Wilshire Ebell Theater, On March 21, 2023</H3>
-        <a href="BookTicket.html?data=Bill Burr" id="ticket" onclick="bookticket()">Buy Tickets</a>
-    </body>
-    <script src="../Javascript/BookTicket.js"></script>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bill Burr</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* Global Styles */
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        text-align: center;
+      }
+
+      /* Styling for the Title */
+      h3 {
+        color: #2c3e50;
+        font-size: 28px;
+        margin-top: 20px;
+        text-transform: uppercase;
+      }
+
+      p {
+        max-width: 900px;
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      /* Image Styling */
+      img.mySlides {
+        width: 80%;
+        height: 100%;
+        border-radius: 15px;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+      }
+
+      /* Button Styles */
+      a {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        margin: 20px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      a:hover {
+        background-color: #45a049;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      a:active {
+        transform: translateY(1px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 400px) {
+        img.mySlides {
+          width: 100%;
+          height: auto;
+        }
+        h3 {
+          font-size: 24px;
+        }
+        p {
+          font-size: 16px;
+        }
+        a {
+          font-size: 16px;
+          padding: 12px 24px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <img class="mySlides" src="../Images/bill.jpg" alt="Bill Burr" />
+    <h3>WHY WATCH BILL BURR?</h3>
+    <h3>ONCE UPON A TIME</h3>
+    <p>
+      Burr's comedy often touches on controversial topics such as race, gender, and politics, and he is known for
+      his acerbic wit and biting social commentary. He has been praised for his ability to tackle difficult subjects
+      with honesty and humor, and for his willingness to take risks and push boundaries. Overall, Bill Burr is a
+      versatile and talented performer with a unique perspective and a style of comedy that is both edgy and
+      entertaining.
+    </p>
+    <h3>WHAT'S THE STORY?</h3>
+    <p>
+      Bill Burr is an American stand-up comedian, actor, and writer known for his cynical and irreverent humor. He
+      was born on June 10, 1968, in Canton, Massachusetts, and began his career as a stand-up comedian in the 1990s.
+      Over the years, he has released several comedy specials and has appeared in a number of films and television
+      shows. In addition to his stand-up comedy career, Burr has appeared in a number of films and television shows,
+      including "Breaking Bad," "The Mandalorian," and "F is for Family," which he also created and executive
+      produced. He has also written for a number of television shows, including "Chappelle's Show" and "The Daily
+      Show with Jon Stewart."
+    </p>
+    <h3>Wilshire Ebell Theater, On March 21, 2023</h3>
+    <a href="BookTicket.html?data=Bill Burr" id="ticket" onclick="bookticket()">Buy Tickets</a>
+  </body>
+  <script src="../Javascript/BookTicket.js"></script>
 </html>

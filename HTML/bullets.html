@@ -1,41 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Bullets On Broadway</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
-            }
-            </style>
-    </head>
-    <body>
-        <center><img class="mySlides" src="../Images\bullets.jpg" width="80%" height="300" > </center>
-        <h3>WHY WATCH BULLETS ON BROADWAY ?</h3>
-        <h3>ONCE UPON A TIME</h3>
-        <P>"Bullets on Broadway" is a specific event or performance, in general, Broadway shows and events 
-            can be a wonderful and exciting experience for fans of theater and live performance. Broadway 
-            is known for its high production values, talented performers, and iconic shows, many of which 
-            have become cultural touchstones and household names. Attending a Broadway show can offer a 
-            memorable and entertaining night out, with a chance to see world-class performers and witness 
-            the magic of live theater.</P>
-        <H3>WHAT'S THE STORY?</H3>
-        <P>It’s the opening night of murder in the first on Broadway, and nerves are high. The cast 
-            and crew are all buzzing backstage with the excitement of the lights, the sounds - and 
-            the dead body of a big-shot Broadway producer. There lies Jack Bialystock, shot in the 
-            back center stage before the curtain could rise.</P>
-        <H3>Virtual Experiences for Los Angeles, Open Run</H3>
-        <a href="BookTicket.html?data=Bullets on Broadway" id="ticket" onclick="bookticket()">Buy Tickets</a>
-    </body>
-    <script src="../Javascript/BookTicket.js"></script>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bullets On Broadway</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      padding: 20px;
+    }
+
+    h3 {
+      color: #8e44ad;
+      font-size: 26px;
+      margin: 20px 0 10px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555;
+      max-width: 900px;
+      margin: 0 auto 30px;
+      padding: 0 15px;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 12px;
+      max-width: 1000px;
+      margin: 0 auto;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding-bottom: 30px;
+    }
+
+    .image-container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .image-container img {
+      width: 80%;
+      height: auto;
+      max-height: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .location {
+      font-size: 18px;
+      font-weight: bold;
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    a {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 16px;
+      margin: 0 auto;
+      display: block;
+      width: fit-content;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    a:hover {
+      background-color: #43a047;
+      transform: translateY(-2px);
+    }
+
+    a:active {
+      transform: scale(0.98);
+    }
+
+    @media (max-width: 768px) {
+      h3 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      a {
+        font-size: 14px;
+        padding: 12px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="image-container">
+      <img class="mySlides" src="../Images/bullets.jpg" alt="Bullets on Broadway Poster">
+    </div>
+
+    <h3>WHY WATCH BULLETS ON BROADWAY?</h3>
+    <p>
+      "Bullets on Broadway" is a specific event or performance, but in general, Broadway shows and events 
+      can be a wonderful and exciting experience for fans of theater and live performance. Broadway 
+      is known for its high production values, talented performers, and iconic shows, many of which 
+      have become cultural touchstones and household names. Attending a Broadway show can offer a 
+      memorable and entertaining night out, with a chance to see world-class performers and witness 
+      the magic of live theater.
+    </p>
+
+    <h3>ONCE UPON A TIME</h3>
+    <p>
+      It’s the opening night of *Murder in the First* on Broadway, and nerves are high. The cast 
+      and crew are all buzzing backstage with the excitement of the lights, the sounds — and 
+      the dead body of a big-shot Broadway producer. There lies Jack Bialystock, shot in the 
+      back center stage before the curtain could rise.
+    </p>
+
+    <h3 class="location">Virtual Experiences for Los Angeles, Open Run</h3>
+    <a href="BookTicket.html?data=Bullets on Broadway" id="ticket" onclick="bookticket()">Buy Tickets</a>
+  </div>
+
+  <script src="../Javascript/BookTicket.js"></script>
+</body>
 </html>

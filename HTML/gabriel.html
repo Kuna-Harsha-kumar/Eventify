@@ -1,45 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Gabriel Iglesias</A></A></title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
-            }
-            </style>
-    </head>
-    <body>
-        <center><img class="mySlides" src="../Images\gabriel.jpg" width="80%" height="300" > </center>
-        <h3>WHY WATCH GABRIEL IGLESIAS?</h3>
-        <h3>ONCE UPON A TIME</h3>
-        <P>Iglesias' comedy often focuses on his experiences growing up in Southern California, his family, 
-            and his love of food. He is known for his distinctive high-pitched voice, which he uses to 
-            great effect in his performances. He has released several comedy specials, including "Hot and 
-            Fluffy" and "I'm Sorry for What I Said When I Was Hungry," and has performed in front of sold-
-            out crowds around the world. Overall, Gabriel Iglesias is a talented and versatile performer 
-            who has built a loyal fanbase through his unique brand of humor and his relatable persona.</P>
-        <H3>WHAT'S THE STORY?</H3>
-        <P>Gabriel Iglesias, also known as "Fluffy", is an American stand-up comedian, actor, and writer. 
-            He was born on July 15, 1976, in San Diego, California, and began his comedy career in the late 
-            1990s. Over the years, he has become known for his observational humor, impressions, and sound 
-            effects. In addition to his stand-up comedy career, Iglesias has appeared in a number of films 
-            and television shows, including "Magic Mike," "Coco," and "Mr. Iglesias," which he created and 
-            stars in. He has also lent his voice to a number of animated projects, including "The Nut Job" 
-            and "Ferdinand."</P>
-        <H3>The Show, Until May 6, 2023</H3>
-        <a href="BookTicket.html?data=Gabriel Iglesias" id="ticket" onclick="bookticket()">Buy Tickets</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Iglesias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
 
-    </body>
+        /* Main Content Styling */
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Image Styling */
+        .mySlides {
+            width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        /* Title Styling */
+        h3 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Button Styling */
+        a {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .mySlides {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <center>
+            <img class="mySlides" src="../Images/gabriel.jpg" alt="Gabriel Iglesias Show">
+        </center>
+        <h3>WHY WATCH GABRIEL IGLESIAS?</h3>
+        <p>Gabriel Iglesias' comedy often focuses on his experiences growing up in Southern California, his family, 
+           and his love of food. He is known for his distinctive high-pitched voice, which he uses to great effect in his performances. 
+           He has released several comedy specials, including "Hot and Fluffy" and "I'm Sorry for What I Said When I Was Hungry," 
+           and has performed in front of sold-out crowds around the world. Overall, Gabriel Iglesias is a talented and versatile performer 
+           who has built a loyal fanbase through his unique brand of humor and his relatable persona.</p>
+
+        <h3>WHAT'S THE STORY?</h3>
+        <p>Gabriel Iglesias, also known as "Fluffy", is an American stand-up comedian, actor, and writer. 
+           He was born on July 15, 1976, in San Diego, California, and began his comedy career in the late 
+           1990s. Over the years, he has become known for his observational humor, impressions, and sound 
+           effects. In addition to his stand-up comedy career, Iglesias has appeared in a number of films 
+           and television shows, including "Magic Mike," "Coco," and "Mr. Iglesias," which he created and 
+           stars in. He has also lent his voice to a number of animated projects, including "The Nut Job" 
+           and "Ferdinand."</p>
+
+        <h3>The Show, Until May 6, 2023</h3>
+        <a href="BookTicket.html?data=Gabriel Iglesias" id="ticket" onclick="bookticket()">Buy Tickets</a>
+    </main>
     <script src="../Javascript/BookTicket.js"></script>
+</body>
 </html>

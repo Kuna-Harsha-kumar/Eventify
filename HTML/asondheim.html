@@ -1,42 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>A Sondheim Celebration With Kevin Stites</A></A></title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A Sondheim Celebration With Kevin Stites</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h3 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin: 0 auto 20px auto;
+            text-align: justify;
+            max-width: 800px;
+        }
+
+        /* Header and Image Styling */
+        .header-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .mySlides {
+            width: 80%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 40px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 1000px;
+            overflow: hidden;
+        }
+
+        /* Button Styling */
+        a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mySlides {
+                width: 90%;
+                height: auto;
             }
-            </style>
-    </head>
-    <body>
-        <center><img class="mySlides" src="../Images\asondheim.jpg" width="80%" height="300" > </center>
-        <h3>WHY WATCH A SONDHEIM CELEBRATION WITH KEVIN STITES ?</h3>
+
+            h3 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            a {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-container">
+        <img class="mySlides" src="../Images/asondheim.jpg" alt="A Sondheim Celebration" />
+        <h3>WHY WATCH A SONDHEIM CELEBRATION WITH KEVIN STITES?</h3>
+    </div>
+
+    <section>
         <h3>ONCE UPON A TIME</h3>
-        <P>"A Sondheim Celebration with Kevin Stites" is a concert film that features a performance of 
+        <p>"A Sondheim Celebration with Kevin Stites" is a concert film that features a performance of 
             several iconic songs from the musical theater works of composer and lyricist Stephen Sondheim. 
             The concert was recorded live at the Carnegie Hall in New York City in 1992. In addition to 
             the performances, the film also features interviews with Sondheim, Stites, and some of the 
-            cast members, as well as archival footage of Sondheim's earlier work.The film is a celebration 
+            cast members, as well as archival footage of Sondheim's earlier work. The film is a celebration 
             of Sondheim's contributions to musical theater and showcases his skillful lyrics and intricate 
             compositions. It is a must-see for fans of Sondheim's work and for anyone who appreciates the 
-            artistry and beauty of musical theater.</P>
-        <H3>WHAT'S THE STORY?</H3>
-        <P>Kevin Stites conducts the New York Philharmonic Orchestra and leads a cast of Broadway stars, 
+            artistry and beauty of musical theater.</p>
+    </section>
+
+    <section>
+        <h3>WHAT'S THE STORY?</h3>
+        <p>Kevin Stites conducts the New York Philharmonic Orchestra and leads a cast of Broadway stars, 
             including Bernadette Peters, Patti LuPone, Barbara Cook, and George Hearn, in performances 
-            of classic Sondheim songs such as "Send in the Clowns," "Being Alive," and "Losing My Mind."</P>
-        <H3>Hollywood Bowl, On December 30, 2023</H3>
-        <a href="BookTicket.html?data=A Sondheim Celebration With Kevin Stites" id="ticket" onclick="bookticket()">Buy Tickets</a>
-    </body>
+            of classic Sondheim songs such as "Send in the Clowns," "Being Alive," and "Losing My Mind."</p>
+    </section>
+
+    <section>
+        <h3>Hollywood Bowl, On December 30, 2023</h3>
+        <div class="btn-container">
+            <a href="BookTicket.html?data=A Sondheim Celebration With Kevin Stites" id="ticket" onclick="bookticket()">Buy Tickets</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 Sondheim Celebration | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+    </footer>
+
     <script src="../Javascript/BookTicket.js"></script>
+</body>
 </html>

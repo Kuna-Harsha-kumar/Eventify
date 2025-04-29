@@ -1,47 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Casablanca</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Casablanca</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h3 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            text-align: justify;
+        }
+
+        /* Header and Image Styling */
+        .header-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .mySlides {
+            width: 80%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section and Layout Styling */
+        section {
+            padding: 40px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 1000px;
+            overflow: hidden;
+        }
+
+        /* Button Styling */
+        a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        /* Center the button */
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mySlides {
+                width: 90%;
+                height: auto;
             }
-            </style>
-    </head>
-    <body>
-        <center><img class="mySlides" src="../Images\Casablanca.jPG" width="80%" height="300" > </center>
-        <h3>WHY WATCH CASABLANCE?</h3>
+
+            h3 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            a {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-container">
+        <img class="mySlides" src="../Images/Casablanca.jpg" alt="Casablanca" />
+        <h3>WHY WATCH CASABLANCA?</h3>
+    </div>
+
+    <section>
         <h3>ONCE UPON A TIME</h3>
-        <P>"Casablanca" is a classic romantic drama film that was released in 1942, set during World War II. 
+        <p>"Casablanca" is a classic romantic drama film that was released in 1942, set during World War II. 
             The film is known for its iconic characters, memorable dialogue, and timeless themes of love, 
             sacrifice, and redemption. It has been hailed as one of the greatest films of all time, and its 
             classic scenes and lines, such as "Here's looking at you, kid," have become embedded in popular 
             culture. "Casablanca" is a cinematic masterpiece that continues to captivate audiences nearly 
-            80 years after its release.</P>
-        <H3>WHAT'S THE STORY?</H3>
-        <P>The film tells the story of Rick Blaine (played by Humphrey Bogart), a cynical American 
-            expatriate who runs a popular nightclub in the Moroccan city of Casablanca.As the war rages 
+            80 years after its release.</p>
+    </section>
+
+    <section>
+        <h3>WHAT'S THE STORY?</h3>
+        <p>The film tells the story of Rick Blaine (played by Humphrey Bogart), a cynical American 
+            expatriate who runs a popular nightclub in the Moroccan city of Casablanca. As the war rages 
             on in Europe, refugees flock to Casablanca in the hopes of obtaining exit visas that will 
             allow them to escape to America. Among them is Rick's former lover, Ilsa Lund (played by 
-            Ingrid Bergman), who had abandoned him years earlier without explanation.When Ilsa unexpectedly 
+            Ingrid Bergman), who had abandoned him years earlier without explanation. When Ilsa unexpectedly 
             shows up in Casablanca with her husband, a renowned resistance fighter named Victor Laszlo, 
             Rick finds himself caught up in a dangerous web of political intrigue and personal loyalties. 
             Despite his bitterness towards Ilsa, Rick begins to realize that he still has feelings for her, 
             and he must decide whether to help her and her husband escape the city, or to save himself and 
-            his own interests.</P>
-        <H3>Gil Cates Theater at the Geffen Playhouse, From September 4 - 7, 2023</H3>
-        <a href="BookTicket.html?data=Casablanca" id="ticket" onclick="bookticket()">Buy Tickets</a>
-    </body>
+            his own interests.</p>
+    </section>
+
+    <section>
+        <h3>Gil Cates Theater at the Geffen Playhouse, From September 4 - 7, 2023</h3>
+        <div class="btn-container">
+            <a href="BookTicket.html?data=Casablanca" id="ticket" onclick="bookticket()">Buy Tickets</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 Casablanca Experience | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+    </footer>
+
     <script src="../Javascript/BookTicket.js"></script>
+</body>
 </html>

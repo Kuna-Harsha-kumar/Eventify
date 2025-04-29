@@ -1,43 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>The Lion King</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Lion King</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            padding: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Header and Title Styling */
+        h3 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        h3:first-of-type {
+            font-size: 2rem;
+            color: #020a02;
+            font-weight: bold;
+        }
+
+        h3:nth-of-type(2) {
+            font-size: 1.7rem;
+        }
+
+        /* Image Styling */
+        .mySlides {
+            width: 80%;
+            height: auto;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .mySlides:hover {
+            transform: scale(1.05);
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Button Styling */
+        a {
+            background-color: #7c6596;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #45a049;
+        }
+
+        /* Centering Content */
+        center {
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mySlides {
+                width: 100%;
+                margin-bottom: 20px;
             }
-            </style>
-            
-    </head>
-    <body>
-        <center><img class="mySlides" src="../Images/LionKing2.jpg" width="80%" height="300" > </center>
-        <h3>WHY SEE LION KING?</h3>
-        <h3>ONCE UPON A TIME</h3>
-        <P>The Lion King is a 1994 American animated musical drama film produced by Walt Disney Feature 
-            Animation and released by Walt Disney Pictures. The Lion King was released on June 15, 1994, 
-            receiving critical acclaim for its music, story, themes, and animation. With an initial worldwide
-             gross of $763 million, it finished its theatrical run as the highest-grossing film of 1994 and the 
-             second-highest-grossing film of all time, behind Jurassic Park (1993).</P>
-        <H3>WHAT'S THE STORY?</H3>
-        <P>The Lion King tells the story of Simba (Swahili for lion), a lion cub who is to succeed his father, 
-            Mufasa, as King of the Pride Lands; however, after his paternal uncle Scar kills Mufasa to seize 
-            the throne, Simba is tricked into believing he was responsible for his father's death and flees 
-            into exile. After growing up in the company of the carefree outcasts Timon and Pumbaa, Simba receives 
-            valuable perspective from his childhood friend, Nala, and his shaman, Rafiki, before returning to 
-            challenge Scar to end his tyranny and take his place in the Circle of Life as the rightful king.</P>
-        <H3>Pantages Theater Hollywood, Until Mar 26, 2023</H3>
-        <a href="BookTicket.html?data=The Lion King" id="ticket" onclick="bookticket()">Buy Tickets</a>
-    </body>
+
+            body {
+                padding: 10px;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <center>
+        <!-- Image -->
+        <img class="mySlides" src="../Images/LionKing2.jpg" alt="The Lion King Poster">
+    </center>
+    
+    <!-- WHY SEE LION KING? -->
+    <h3>WHY SEE LION KING?</h3>
+    <h3>ONCE UPON A TIME</h3>
+    <p>
+        The Lion King is a 1994 American animated musical drama film produced by Walt Disney Feature 
+        Animation and released by Walt Disney Pictures. The Lion King was released on June 15, 1994, 
+        receiving critical acclaim for its music, story, themes, and animation. With an initial worldwide
+        gross of $763 million, it finished its theatrical run as the highest-grossing film of 1994 and the 
+        second-highest-grossing film of all time, behind Jurassic Park (1993).
+    </p>
+    
+    <!-- WHAT'S THE STORY? -->
+    <h3>WHAT'S THE STORY?</h3>
+    <p>
+        The Lion King tells the story of Simba (Swahili for lion), a lion cub who is to succeed his father, 
+        Mufasa, as King of the Pride Lands; however, after his paternal uncle Scar kills Mufasa to seize 
+        the throne, Simba is tricked into believing he was responsible for his father's death and flees 
+        into exile. After growing up in the company of the carefree outcasts Timon and Pumbaa, Simba receives 
+        valuable perspective from his childhood friend, Nala, and his shaman, Rafiki, before returning to 
+        challenge Scar to end his tyranny and take his place in the Circle of Life as the rightful king.
+    </p>
+
+    <!-- Theater Info -->
+    <h3>Pantages Theater Hollywood, Until Mar 26, 2023</h3>
+
+    <!-- Book Tickets Button -->
+    <a href="BookTicket.html?data=The Lion King" id="ticket" onclick="bookticket()">Buy Tickets</a>
+    
+    <!-- External JS (Optional) -->
     <script src="../Javascript/BookTicket.js"></script>
+</body>
 </html>

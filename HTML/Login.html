@@ -5,55 +5,167 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login page</title>
-    <link rel="stylesheet" href="..\CSS\Login.css">
-    
+    <style>
+        /* Reset some default browser styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .headingsContainer h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .headingsContainer p {
+            font-size: 14px;
+            color: #888;
+        }
+
+        .mainContainer {
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"], input[type="password"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus, select:focus {
+            outline: none;
+            border-color: #5c9ded;
+            box-shadow: 0 0 5px rgba(92, 157, 237, 0.5);
+        }
+
+        .loginas {
+            margin-bottom: 20px;
+        }
+
+        .subcontainer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        button.loginbtn {
+            background-color: #5c9ded;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button.loginbtn:hover {
+            background-color: #4a8ec1;
+        }
+
+        .register {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .register a {
+            color: #5c9ded;
+            text-decoration: none;
+        }
+
+        .register a:hover {
+            text-decoration: underline;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <form id="form" >
-        <!-- Headings for the form -->
-        <div class="headingsContainer">
-            <h3>Login</h3>
-            <p>Login with your username and password</p>
-        </div>
-
-        <!-- Main container for all inputs -->
-        <div class="mainContainer">
-            <!-- Username -->
-            <label for="username">Your username</label>
-            <input type="text" id="username" placeholder="Enter Username" name="username" required>
-
-            <br><br>
-
-            <!-- Password -->
-            <label for="pswrd">Your password</label>
-            <input type="password" placeholder="Enter Password" id="password" name="pswrd" required>
-            <br><br>
-            <div class="loginas">
-                <label>Login as: </label>
-                <select style="width:150px" name="login as" id="loginas">
-                    <option selected value="select">Select</option>
-                   <option value="Admin">Admin</option>
-                   <option value="User">User</option>
-                </select>
-            </div>
-            <br><br>
-            <!-- sub container for the checkbox and forgot password link -->
-            <div class="subcontainer">
-                <label>
-                  <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
+    <div class="login-container">
+        <form id="form">
+            <!-- Headings for the form -->
+            <div class="headingsContainer">
+                <h3>Login</h3>
+                <p>Login with your username and password</p>
             </div>
 
+            <!-- Main container for all inputs -->
+            <div class="mainContainer">
+                <!-- Username -->
+                <label for="username">Your username</label>
+                <input type="text" id="username" placeholder="Enter Username" name="username" required>
 
-            <!-- Submit button -->
-            <center><button type="submit" class="loginbtn">Login</button></center>
+                <br><br>
 
-            <!-- Sign up link -->
-            <p class="register">Not a member?  <a href="Register.html">Register here!</a></p>
+                <!-- Password -->
+                <label for="pswrd">Your password</label>
+                <input type="password" placeholder="Enter Password" id="password" name="pswrd" required>
+                <br><br>
 
-        </div>
+                <div class="loginas">
+                    <label>Login as: </label>
+                    <select style="width:150px" name="login as" id="loginas">
+                        <option selected value="select">Select</option>
+                        <option value="Admin">Admin</option>
+                        <option value="User">User</option>
+                    </select>
+                </div>
+                <br><br>
 
-    </form>
+                <!-- Sub container for the checkbox and forgot password link -->
+                <div class="subcontainer">
+                    <label>
+                      <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <!-- Submit button -->
+                <center><button type="submit" class="loginbtn">Login</button></center>
+
+                <!-- Sign up link -->
+                <p class="register">Not a member?  <a href="Register.html">Register here!</a></p>
+
+            </div>
+        </form>
+    </div>
+
     <script src="..\Javascript\Login.js"></script>
 </body>
 </html>

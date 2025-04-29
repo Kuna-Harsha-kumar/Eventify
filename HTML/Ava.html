@@ -1,41 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Ava - The Secret Conversations</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
-            }
-            </style>
-    </head>
-    <body>
-        <center><img class="mySlides" src="../Images\ava.jpg" width="80%" height="300" > </center>
-        <h3>WHY WATCH AVA - THE SECRET CONVERSATIONS ?</h3>
-        <h3>ONCE UPON A TIME</h3>
-        <P>"Ava: The Secret Conversations." offers a fascinating behind-the-scenes look at the life of one of the 
-            most iconic actresses of the era. Additionally, the book provides insights into the inner workings of 
-            the Hollywood studio system and the personal lives of many of the industry's biggest stars. The 
-            conversations between Gardner and Evans are also highly personal and revealing, discussing topics such 
-            as love, sex, marriage, and the struggles of fame and success. As such, the book provides a window into 
-            the personal and emotional lives of two highly talented and complex individuals.</P>
-        <H3>WHAT'S THE STORY?</H3>
-        <P>Ava: The Secret Conversations" is a book that contains conversations between Ava Gardner, the Hollywood 
-            actress, and Peter Evans, a British journalist who interviewed her in the early 1980s. The book offers 
-            a unique insight into Gardner's life, career, and personal relationships, and provides a glimpse into 
-            the golden age of Hollywood.</P>
-        <H3>Gill Cates Theater at the Geffen Playhouse, On May June 7, 2023</H3>
-        <a href="BookTicket.html?data=Ava - The Secret Conversations" id="ticket" onclick="bookticket()">Buy Tickets</a>
-    </body>
-    <script src="../Javascript/BookTicket.js"></script>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ava - The Secret Conversations</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdfaf6;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h3 {
+      color: #6d214f;
+      font-size: 28px;
+      margin-top: 30px;
+      text-transform: uppercase;
+    }
+
+    p {
+      max-width: 900px;
+      margin: 20px auto;
+      font-size: 18px;
+      color: #555;
+      padding: 0 10px;
+    }
+
+    /* Image Styling */
+    img.mySlides {
+      width: 85%;
+      max-width: 1000px;
+      height: auto;
+      border-radius: 12px;
+      margin: 30px auto 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Button Styling */
+    a {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 35px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 30px auto;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #43a047;
+      transform: translateY(-2px);
+    }
+
+    a:active {
+      transform: scale(0.98);
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+      h3 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      a {
+        font-size: 16px;
+        padding: 12px 25px;
+      }
+
+      img.mySlides {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <img class="mySlides" src="../Images/ava.jpg" alt="Ava - The Secret Conversations Poster">
+
+  <h3>Why Watch Ava - The Secret Conversations?</h3>
+  <h3>Once Upon a Time</h3>
+  <p>
+    "Ava: The Secret Conversations" offers a fascinating behind-the-scenes look at the life of one of the most iconic actresses of the era.
+    The book provides insights into the inner workings of the Hollywood studio system and the personal lives of many of the industry's biggest stars.
+    The conversations between Gardner and Evans are also highly personal and revealing, discussing topics such as love, sex, marriage, and the struggles of fame and success.
+    As such, the book provides a window into the personal and emotional lives of two highly talented and complex individuals.
+  </p>
+
+  <h3>What's the Story?</h3>
+  <p>
+    "Ava: The Secret Conversations" is a book that contains conversations between Ava Gardner, the Hollywood actress,
+    and Peter Evans, a British journalist who interviewed her in the early 1980s.
+    The book offers a unique insight into Gardner's life, career, and personal relationships, and provides a glimpse into the golden age of Hollywood.
+  </p>
+
+  <h3>Gill Cates Theater at the Geffen Playhouse, On June 7, 2023</h3>
+  <a href="BookTicket.html?data=Ava - The Secret Conversations" id="ticket" onclick="bookticket()">Buy Tickets</a>
+
+  <script src="../Javascript/BookTicket.js"></script>
+</body>
 </html>

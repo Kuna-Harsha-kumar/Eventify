@@ -8,57 +8,140 @@
     <link rel="stylesheet" href="..\CSS\Login.css">
    
     <style>
-         
-        
-        a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
+        /* Global styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container for the form */
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 400px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* Headings */
+        .headingsContainer h3 {
+            font-size: 24px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        /* Main container for the form */
+        .mainContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Labels with value styling */
+        label + label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Style for the total cost label */
+        #totalcost {
+            font-size: 20px;
+            color: #296e65;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:active {
+            background-color: #388e3c;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            .form-container {
+                width: 90%;
+                padding: 30px;
             }
+
+            button {
+                padding: 12px 24px;
+            }
+        }
+
+        /* Adding a subtle animation for form appearance */
+        .form-container {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
     </style>
 </head>
 <body>
-    <form id="form1" action="">
-        <!-- Headings for the form -->
-        <div class="headingsContainer">
-            <h3>FINAL PAYMENT DETAILS</h3>
-        </div>
+    <div class="form-container">
+        <form id="form1" action="">
+            <!-- Headings for the form -->
+            <div class="headingsContainer">
+                <h3>FINAL PAYMENT DETAILS</h3>
+            </div>
 
-        <!-- Main container for all inputs -->
-        <div class="mainContainer">
-            
-            <br><br>
-        
-            <label>No Of Tickets: </label>
-               <label id="nooftickets"></label>
-        
-        <br><br>
-        
-            <label>Ticket Cost: $</label>
-               <label id="ticketcost"></label>
-        
-        <br><br>
-        
-            <label>Taxes: $</label><label id="taxes"></label>
-        
-        <br><br>
-        
-            <label>Total Cost: $</label>
-               <label id="totalcost">21.67</label>
-        
-        <br><br>
-            <!-- Submit button -->
-            <center><button id="pay" onclick="submitpayment()">PAY</button></center>
-        </div>
+            <!-- Main container for all inputs -->
+            <div class="mainContainer">
+                
+                <label>No Of Tickets: </label>
+                <label id="nooftickets">5</label>
 
-    </form>
+                <label>Ticket Cost: $</label>
+                <label id="ticketcost">15.00</label>
+
+                <label>Taxes: $</label>
+                <label id="taxes">2.00</label>
+
+                <label>Total Cost: $</label>
+                <label id="totalcost">21.67</label>
+
+                <!-- Submit button -->
+                <button id="pay" type="button" onclick="submitpayment()">PAY</button>
+            </div>
+        </form>
+    </div>
+
     <script src="..\Javascript\FinalPayment.js"></script>
 </body>
 </html>

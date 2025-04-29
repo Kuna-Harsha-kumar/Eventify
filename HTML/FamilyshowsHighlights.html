@@ -5,77 +5,167 @@
         <title>Family Shows</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-            .imgleft{
-    max-width: 100%;
-    max-height:100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.textright{
-    font-size: 20px;
-    padding-left: 20px;
-}
-.shows{
-    display: flex;
-  align-items: left;
-  justify-content: left;
-}
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
+            /* General Styles */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f9;
+                color: #333;
             }
-            </style>
+
+            /* Header Section */
+            h2 {
+                text-align: center;
+                font-size: 36px;
+                margin: 40px 0 20px;
+                color: #333;
+                font-weight: bold;
+            }
+
+            #Category {
+                color: #4CAF50;
+                font-size: 40px;
+            }
+
+            /* Layout for Shows */
+            .shows {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 20px 0;
+                padding: 20px;
+                border-bottom: 2px solid #ddd;
+            }
+
+            .imgleft {
+                flex: 1;
+                padding: 20px;
+                max-width: 100%;
+            }
+
+            .textright {
+                flex: 2;
+                padding: 20px;
+                max-width: 600px;
+                margin-left: 20px;
+                background-color: #ffffff;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+
+            /* Image Styling */
+            .imgleft img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Show Title */
+            h3 {
+                color: #333;
+                font-size: 24px;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            /* Paragraph Styling */
+            p {
+                font-size: 16px;
+                line-height: 1.6;
+                color: #555;
+                margin-bottom: 20px;
+            }
+
+            /* Event Date */
+            .date {
+                font-size: 18px;
+                color: #777;
+                margin-bottom: 20px;
+            }
+
+            /* Button Styling */
+            a {
+                background-color: #4CAF50;
+                color: white;
+                text-decoration: none;
+                padding: 12px 28px;
+                border-radius: 5px;
+                font-size: 18px;
+                margin-top: 10px;
+                display: inline-block;
+                transition: background-color 0.3s ease;
+            }
+
+            a:hover {
+                background-color: #45a049;
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .shows {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .textright {
+                    margin-left: 0;
+                    margin-top: 20px;
+                }
+            }
+        </style>
     </head>
-<body>
+    <body>
 
+        <!-- Header Section -->
+        <div>
+            <h2><b id="Category">Family Shows Highlights</b></h2>
+        </div>
 
-<div>
-    <h2>
-        <b id="Category">Family Shows Highlights</b></h2></div>
-              <div class="shows">
+        <!-- Jurassic World Show Section -->
+        <div class="shows">
             <div class="imgleft">
-              <img src="../images/jurassic.jpg" width="300" height="300"/>
+                <img src="../images/jurassic.jpg" alt="Jurassic World Live" />
             </div>
             <div class="textright">
                 <h3>JURASSIC WORLD LIVE</h3>
-                <P>Jurassic World Live is a thrilling live-action show that takes audiences on an epic adventure 
+                <p>Jurassic World Live is a thrilling live-action show that takes audiences on an epic adventure 
                     to Isla Nublar, the home of Jurassic World. The story follows a team of scientists who are 
                     trying to protect the dinosaurs on the island from a dangerous new threat. Along the way, they 
                     encounter a host of incredible creatures, including velociraptors, triceratops, and of course, 
                     the mighty T-Rex. With breathtaking stunts, stunning special effects, and a heart-pumping 
-                    soundtrack, Jurassic World Live is an unforgettable experience for fans of all ages.</P>
-                <h3>Honda Center Anaheim , From July 14 - 16 , 2023</h3>
+                    soundtrack, Jurassic World Live is an unforgettable experience for fans of all ages.</p>
+                <div class="date">Honda Center Anaheim, From July 14 - 16, 2023</div>
                 <a href="BookTicket.html?data=JURASSIC WORLD LIVE" id="ticket" onclick="bookticket()">Buy Tickets</a>
             </div>
-            </div>
-            <div class="shows">
+        </div>
+
+        <!-- Monster Jam Show Section -->
+        <div class="shows">
             <div class="imgleft">
-              <img src="../images/monster.jpg" width="300" height="300"/>
+                <img src="../images/monster.jpg" alt="Monster Jam" />
             </div>
             <div class="textright">
                 <h3>MONSTER JAM</h3>
-              <p>Monster Jam is a live motorsport event featuring some of the world's most iconic monster trucks, 
-                including Grave Digger, Max-D, and El Toro Loco. The event consists of various competitions, 
-                including racing and freestyle, where drivers compete for the highest scores by performing 
-                impressive stunts and maneuvers such as high jumps, backflips, and donuts. With exciting pyrotechnics, 
-                electrifying music, and high-energy performances, Monster Jam is a thrilling and unforgettable 
-                experience for fans of all ages who are looking for adrenaline-pumping entertainment.</p>
-                <h3>Angel Stadium Of Anaheim , On November 11 , 2023</h3>
+                <p>Monster Jam is a live motorsport event featuring some of the world's most iconic monster trucks, 
+                    including Grave Digger, Max-D, and El Toro Loco. The event consists of various competitions, 
+                    including racing and freestyle, where drivers compete for the highest scores by performing 
+                    impressive stunts and maneuvers such as high jumps, backflips, and donuts. With exciting pyrotechnics, 
+                    electrifying music, and high-energy performances, Monster Jam is a thrilling and unforgettable 
+                    experience for fans of all ages who are looking for adrenaline-pumping entertainment.</p>
+                <div class="date">Angel Stadium of Anaheim, On November 11, 2023</div>
                 <a href="BookTicket.html?data=MONSTER JAM" id="ticket" onclick="bookticket()">Buy Tickets</a>
             </div>
-            </div>
-                      <p id="shows" ></p>
-                    
-          
-            
-            </div>
-            <script src="../Javascript/CategoryHighlights.js"></script>
-        </body>
+        </div>
+
+        <!-- Footer Section (Optional if you want to add footer later) -->
+        <footer style="text-align: center; padding: 20px 0; background-color: #333; color: white;">
+            <p>All rights reserved @Book Your Events</p>
+            <a href="About.html" style="color: white;">About Us</a>
+        </footer>
+
+        <!-- JavaScript (Optional) -->
+        <script src="../Javascript/CategoryHighlights.js"></script>
+    </body>
+</html>

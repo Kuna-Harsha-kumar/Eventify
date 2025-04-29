@@ -1,82 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Dance</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            .imgleft{
-    max-width: 100%;
-    max-height:100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.textright{
-    font-size: 20px;
-    padding-left: 20px;
-}
-.shows{
-    display: flex;
-  align-items: left;
-  justify-content: left;
-}
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background: linear-gradient(135deg, #74ebd5, #9face6);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 40px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .shows {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .show-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .show-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .show-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .show-card .content {
+            padding: 20px;
+        }
+
+        .show-card h3 {
+            font-size: 24px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .show-card p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .show-card a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .show-card a:hover {
+            background-color: #45a049;
+        }
+
+        @media screen and (max-width: 768px) {
+            .shows {
+                flex-direction: column;
+                align-items: center;
             }
-            </style>
-    </head>
+        }
+    </style>
+</head>
 <body>
 
+    <div>
+        <h2>Dance Highlights</h2>
+    </div>
 
-<div>
-    <h2>
-        <b id="Category">Dance Highlights</b></h2></div>
-              <div class="shows">
-            <div class="imgleft">
-              <img src="../images/thunder.jpg" width="300" height="300"/>
-            </div>
-            <div class="textright">
+    <div class="shows">
+        <!-- Thunder from Down Under -->
+        <div class="show-card">
+            <img src="../images/thunder.jpg" alt="Thunder From Down Under">
+            <div class="content">
                 <h3>THUNDER FROM DOWN UNDER</h3>
-                <P>Thunder From Down Under is a male revue show featuring a cast of Australian dancers who perform 
-                    various dance routines and stripteases in a Las Vegas-style setting. The show is known for its 
-                    energetic and interactive performances, with audience members often being invited on stage for 
-                    various segments. The dancers showcase their impressive physiques and athletic abilities while 
-                    entertaining the crowd with their charismatic personalities and cheeky humor. Overall, Thunder 
-                    From Down Under is a fun and exciting show that promises a memorable night out for fans of male 
-                    revue and entertainment.</P>
-                <h3>Canyon Club , On May 27 , 2023</h3>
-                <a href="BookTicket.html?data=THUNDER FROM DOWN UNDER" id="ticket" onclick="bookticket()">Buy Tickets</a>
+                <p>Thunder From Down Under is a male revue show featuring a cast of Australian dancers who perform 
+                   various dance routines and stripteases in a Las Vegas-style setting. The show is known for its 
+                   energetic and interactive performances, with audience members often being invited on stage for 
+                   various segments. The dancers showcase their impressive physiques and athletic abilities while 
+                   entertaining the crowd with their charismatic personalities and cheeky humor. Overall, Thunder 
+                   From Down Under is a fun and exciting show that promises a memorable night out for fans of male 
+                   revue and entertainment.</p>
+                <h3>Canyon Club, On May 27, 2023</h3>
+                <a href="BookTicket.html?data=THUNDER FROM DOWN UNDER" onclick="bookticket()">Buy Tickets</a>
             </div>
-            </div>
-            <div class="shows">
-            <div class="imgleft">
-              <img src="../images/stars.jpg" width="300" height="300"/>
-            </div>
-            <div class="textright">
+        </div>
+
+        <!-- Stars on Ice -->
+        <div class="show-card">
+            <img src="../images/stars.jpg" alt="Stars on Ice">
+            <div class="content">
                 <h3>STARS ON ICE</h3>
-              <p>"Stars on Ice" is a touring ice show that features some of the world's most talented figure skaters 
-                performing breathtaking routines on ice. The show was created by Olympic gold medalist Scott Hamilton 
-                and has featured many other Olympic and world champion skaters throughout the years. The performances 
-                are set to a variety of music and include both solo and group routines, as well as some comedic moments. 
-                The show is known for its high-energy, stunning choreography and amazing athleticism, making it a must-
-                see for any fan of figure skating or live performance.</p>
-                <h3>Honda Center Anaheim , On May 20 , 2023</h3>
-                <a href="BookTicket.html?data=STARS ON ICE" id="ticket" onclick="bookticket()">Buy Tickets</a>
+                <p>"Stars on Ice" is a touring ice show that features some of the world's most talented figure skaters 
+                   performing breathtaking routines on ice. The show was created by Olympic gold medalist Scott Hamilton 
+                   and has featured many other Olympic and world champion skaters throughout the years. The performances 
+                   are set to a variety of music and include both solo and group routines, as well as some comedic moments. 
+                   The show is known for its high-energy, stunning choreography and amazing athleticism, making it a must-
+                   see for any fan of figure skating or live performance.</p>
+                <h3>Honda Center Anaheim, On May 20, 2023</h3>
+                <a href="BookTicket.html?data=STARS ON ICE" onclick="bookticket()">Buy Tickets</a>
             </div>
-            </div>
-                      <p id="shows" ></p>
-                    
-          
-            
-            </div>
-            <script src="../Javascript/CategoryHighlights.js"></script>
-        </body>
+        </div>
+    </div>
+
+    <script src="../Javascript/CategoryHighlights.js"></script>
+</body>
+</html>

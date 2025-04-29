@@ -1,72 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>May</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            .imgleft{
-    max-width: 100%;
-    max-height:100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.textright{
-    font-size: 20px;
-    padding-left: 20px;
-}
-.shows{
-    display: flex;
-  align-items: left;
-  justify-content: left;
-}
-            a {
-              background-color: #4CAF50;
-              border: none;
-              color: white;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin: 4px 2px;
-              cursor: pointer;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May Highlights</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+            font-size: 2.5rem;
+        }
+
+        h3 {
+            color: #4CAF50;
+            font-size: 1.8rem;
+            margin-top: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #555;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        /* Styling the Event Sections */
+        .shows {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .shows:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* Styling the Image */
+        .imgleft {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .imgleft img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling the Text Block */
+        .textright {
+            flex: 2;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .textright h3 {
+            margin-top: 10px;
+            font-size: 1.6rem;
+            color: #333;
+        }
+
+        .textright p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Button Styling */
+        a {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #45a049;
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .shows {
+                flex-direction: column;
+                align-items: center;
+                margin: 10px 0;
             }
-            </style>
-    </head>
+
+            .imgleft, .textright {
+                padding: 10px;
+            }
+
+            .textright h3 {
+                font-size: 1.4rem;
+            }
+
+            .textright p {
+                font-size: 1rem;
+            }
+
+            a {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
 <body>
 
+    <div>
+        <h2><b id="Month">May Highlights</b></h2>
+    </div>
 
-<div>
-    <h2>
-        <b id="Month">May Highlights</b></h2></div>
-              <div class="shows">
-            <div class="imgleft">
-              <img src="../images/ava.jpg" width="300" height="300"/>
-            </div>
-            <div class="textright">
-                <h3>AVA - THE SECRET CONVERSATIONS</h3>
-                <P>"Ava - The Secret Conversations" is a fascinating documentary that sheds light on 
-                    the extraordinary life and career of one of Hollywood's most enigmatic actresses. 
-                    Through a series of never-before-seen interviews with Ava Gardner, conducted in the 
-                    final years of her life, we are given a rare glimpse into the mind and heart of this 
-                    iconic star. From her turbulent marriage to Frank Sinatra to her legendary affair with 
-                    bullfighter Luis Miguel Dominguín, Gardner's candid reflections provide a candid and 
-                    often surprising look at her life and loves. With stunning archival footage and a 
-                    powerful soundtrack, "Ava - The Secret Conversations" is a moving tribute to one of 
-                    cinema's greatest icons, and a compelling portrait of a woman who lived life on her own 
-                    terms.</P>
-                <h3>Gil Cates Theater at the Geffen Playhouse, On May June 7, 2023</h3>
-                <a href="BookTicket.html?data=AVA - THE SECRET CONVERSATIONS" id="ticket" onclick="bookticket()">Buy Tickets</a>
-            </div>
-            </div>
-            <div class="shows">
-            <div class="imgleft">
-              <img src="../images/anastasia.jpg" width="300" height="300"/>
-            </div>
-            <div class="textright">
-                <h3>ANASTASIA</h3>
-              <p>Anastasia is a spectacular musical that tells the story of a young woman named Anya, who 
+    <!-- AVA - The Secret Conversations -->
+    <div class="shows">
+        <div class="imgleft">
+            <img src="../images/ava.jpg" alt="AVA - THE SECRET CONVERSATIONS"/>
+        </div>
+        <div class="textright">
+            <h3>AVA - THE SECRET CONVERSATIONS</h3>
+            <p>"Ava - The Secret Conversations" is a fascinating documentary that sheds light on 
+                the extraordinary life and career of one of Hollywood's most enigmatic actresses. 
+                Through a series of never-before-seen interviews with Ava Gardner, conducted in the 
+                final years of her life, we are given a rare glimpse into the mind and heart of this 
+                iconic star. From her turbulent marriage to Frank Sinatra to her legendary affair with 
+                bullfighter Luis Miguel Dominguín, Gardner's candid reflections provide a candid and 
+                often surprising look at her life and loves. With stunning archival footage and a 
+                powerful soundtrack, "Ava - The Secret Conversations" is a moving tribute to one of 
+                cinema's greatest icons, and a compelling portrait of a woman who lived life on her own 
+                terms.</p>
+            <h3>Gil Cates Theater at the Geffen Playhouse, On May 7, 2023</h3>
+            <a href="BookTicket.html?data=AVA - THE SECRET CONVERSATIONS" id="ticket" onclick="bookticket()">Buy Tickets</a>
+        </div>
+    </div>
+
+    <!-- ANASTASIA -->
+    <div class="shows">
+        <div class="imgleft">
+            <img src="../images/anastasia.jpg" alt="ANASTASIA"/>
+        </div>
+        <div class="textright">
+            <h3>ANASTASIA</h3>
+            <p>Anastasia is a spectacular musical that tells the story of a young woman named Anya, who 
                 may or may not be the long-lost princess Anastasia Romanov. Set in the midst of the Russian 
                 Revolution, the musical takes us on a journey through the streets of St. Petersburg, Paris, 
                 and beyond, as Anya sets out to discover the truth about her past and find her rightful place 
@@ -74,14 +175,13 @@
                 unforgettable characters, Anastasia is a must-see musical that will leave you spellbound from 
                 beginning to end. It's a story of hope, love, and resilience, that reminds us of the power of 
                 family and the importance of never giving up on our dreams.</p>
-                <h3>Fred Kavil Theatre, From May 27 - 30, 2023</h3>
-                <a href="BookTicket.html?data=ANASTASIA" id="ticket" onclick="bookticket()">Buy Tickets</a>
-            </div>
-            </div>
-                      <p id="shows" ></p>
-                    
-          
-            
-            </div>
-            <script src="../Javascript/Highlights.js"></script>
-        </body>
+            <h3>Fred Kavil Theatre, From May 27 - 30, 2023</h3>
+            <a href="BookTicket.html?data=ANASTASIA" id="ticket" onclick="bookticket()">Buy Tickets</a>
+        </div>
+    </div>
+
+    <p id="shows"></p>
+
+    <script src="../Javascript/Highlights.js"></script>
+</body>
+</html>
