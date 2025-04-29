@@ -3,6 +3,7 @@ p {
 }
 body {
   overflow: hidden;
+  /* background-color: #189ab4; */
 }
 .container {
   float: left;
@@ -24,11 +25,13 @@ body {
 }
 body {
   font-family: "Lato", sans-serif;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
+  background-color: #adc4d7;
 }
 
 .sidenav {
-  background-color: blanchedalmond;
+  /* background-color: rgb(205, 255, 238); */
+  background-color: #5b89ae;
   float: left;
   top: 1;
   left: 0;

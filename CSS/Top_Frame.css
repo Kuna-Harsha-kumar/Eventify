@@ -1,13 +1,30 @@
 body {
-  background-color: black;
+  background-color: #5b89ae;
+  margin: 0; /* Ensures no scrollbars due to body margin */
+  overflow: hidden; /* Prevents scrollbars */
 }
 
 .a {
-  color: rgb(255, 0, 21);
+  color: #cb8e66;
 }
+
 .b {
   color: white;
 }
+
 h3 {
   color: rgb(204, 201, 197);
+}
+
+h2 {
+  position: absolute; /* Allows precise positioning */
+  top: 10px; /* Adjusts vertical position */
+  right: 10px; /* Adjusts horizontal position */
+  margin: 0; /* Removes default margin */
+  color: white; /* Optional: Ensures visibility on background */
+  font-size: 1.2em; /* Optional: Adjust font size */
+}
+
+.logout {
+  display: inline; /* Ensures the span doesn't affect layout */
 }
