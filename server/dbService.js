@@ -254,6 +254,89 @@ class DbService {
             console.log(error);
         }
     }
+
+    async getTotalTicketsPerUser() {
+        try {
+          const response = await new Promise((resolve, reject) => {
+            const query = `
+              SELECT username, SUM(nooftickets) AS total_tickets
+              FROM bookingdetails
+              GROUP BY username;
+            `;
+            this.connection.query(query, (err, results) => {
+              if (err) reject(new Error(err.message));
+              resolve(results);
+            });
+          });
+          return response;
+          console.log(response);
+        } catch (error) {
+          console.error(error);
+          throw error;
+        }
+      }
+
+      async getMonthlyBookingTotals() {
+        try {
+          const response = await new Promise((resolve, reject) => {
+            const query = `
+              SELECT DATE_FORMAT(showdate, '%Y-%m') AS month, COUNT(*) AS bookings
+              FROM bookingdetails
+              GROUP BY month;
+            `;
+            this.connection.query(query, (err, results) => {
+              if (err) reject(new Error(err.message));
+              resolve(results);
+            });
+          });
+          return response;
+        } catch (error) {
+          console.error(error);
+          throw error;
+        }
+      }
+      async getTotalTicketsPerShow() {
+        try {
+          const response = await new Promise((resolve, reject) => {
+            const query = `
+              SELECT name, SUM(nooftickets) AS total_tickets
+              FROM bookingdetails
+              GROUP BY name
+              ORDER BY total_tickets DESC;
+            `;
+            this.connection.query(query, (err, results) => {
+              if (err) reject(new Error(err.message));
+              resolve(results);
+            });
+          });
+          return response;
+        } catch (error) {
+          console.error(error);
+          throw error;
+        }
+      }
+      async getTotalRevenuePerBooking() {
+        try {
+          const response = await new Promise((resolve, reject) => {
+            const query = `
+              SELECT b.name, u.username, (b.nooftickets * p.ticket_cost) AS total_revenue
+              FROM bookingdetails b
+              JOIN userdetails u ON b.username = u.username
+              JOIN paymentdetails p ON p.name = b.name;
+            `;
+            this.connection.query(query, (err, results) => {
+              if (err) reject(new Error(err.message));
+              resolve(results);
+            });
+          });
+          return response;
+        } catch (error) {
+          console.error(error);
+          throw error;
+        }
+      }
+                  
+      
 }
 
 module.exports = DbService;

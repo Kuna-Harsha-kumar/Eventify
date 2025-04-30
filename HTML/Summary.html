@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Data</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* Container for buttons and results */
+    .container {
+      width: 80%;
+      max-width: 1000px;
+      margin: 20px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    /* Buttons Styling */
+    button {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 1rem;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin: 10px 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      transform: translateY(-2px);
+    }
+
+    button:active {
+      background-color: #3e8e41;
+      transform: translateY(0);
+    }
+
+    /* Table Styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 1rem;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    td {
+      background-color: #f9f9f9;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f1f1f1;
+    }
+
+    /* Results Styling */
+    .results {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .results p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .container {
+        width: 100%;
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+
+      table {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Booking Data</h1>
+
+  <div class="container">
+    <button onclick="fetchTotalTicketsPerUser()">Get Total Tickets per User</button>
+    <button onclick="fetchMonthlyBookingTotals()">Get Monthly Booking Totals</button>
+    <button onclick="fetchTotalTicketsPerShow()">Get Total Tickets per Show</button>
+    <button onclick="fetchTotalRevenuePerBooking()">Get Total Revenue per Booking</button>
+
+    <div id="results" class="results"></div>
+  </div>
+
+  <script>
+    // Function to fetch and display total tickets per user
+    async function fetchTotalTicketsPerUser() {
+      try {
+        const response = await fetch('http://localhost:3001/totalTicketsPerUser');
+        const data = await response.json();
+        displayResults('Total Tickets per User', data.data);
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to fetch total tickets per user.');
+      }
+    }
+
+    // Function to fetch and display monthly booking totals
+    async function fetchMonthlyBookingTotals() {
+      try {
+        const response = await fetch('http://localhost:3001/monthlyBookingTotals');
+        const data = await response.json();
+        displayResults('Monthly Booking Totals', data.data);
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to fetch monthly booking totals.');
+      }
+    }
+
+    // Function to fetch and display total tickets per show
+    async function fetchTotalTicketsPerShow() {
+      try {
+        const response = await fetch('http://localhost:3001/totalTicketsPerShow');
+        const data = await response.json();
+        displayResults('Total Tickets per Show', data.data);
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to fetch total tickets per show.');
+      }
+    }
+
+    // Function to fetch and display total revenue per booking
+    async function fetchTotalRevenuePerBooking() {
+      try {
+        const response = await fetch('http://localhost:3001/totalRevenuePerBooking');
+        const data = await response.json();
+        displayResults('Total Revenue per Booking', data.data);
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to fetch total revenue per booking.');
+      }
+    }
+
+    // Function to display the results in a table
+    function displayResults(title, data) {
+      let htmlContent = `<h2>${title}</h2>`;
+      if (data.length > 0) {
+        htmlContent += `<table><tr>`;
+        // Dynamically create table headers
+        Object.keys(data[0]).forEach(key => {
+          htmlContent += `<th>${key}</th>`;
+        });
+        htmlContent += `</tr>`;
+
+        // Populate the table rows
+        data.forEach(item => {
+          htmlContent += `<tr>`;
+          Object.values(item).forEach(value => {
+            htmlContent += `<td>${value}</td>`;
+          });
+          htmlContent += `</tr>`;
+        });
+        htmlContent += `</table>`;
+      } else {
+        htmlContent += `<p>No data available</p>`;
+      }
+
+      // Insert the generated HTML into the results div
+      document.getElementById('results').innerHTML = htmlContent;
+    }
+  </script>
+
+</body>
+</html>

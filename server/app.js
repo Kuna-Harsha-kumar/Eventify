@@ -62,6 +62,55 @@ app.get('/payments/:name', (request, response) => {
     .catch(err => console.log(err));
 })
 
+// Endpoint to get total tickets per user
+app.get('/totalTicketsPerUser', (request, response) => {
+    console.log("Fetching total tickets per user");
+    const db = dbService.getDbServiceInstance();
+    
+    const result = db.getTotalTicketsPerUser();  // Call the function to fetch the data
+    
+    result
+      .then(data => response.json({ data: data }))  // Return the result as JSON
+      .catch(err => console.log(err));  // Handle any errors
+  });
+  
+  // Endpoint to get monthly booking totals
+  app.get('/monthlyBookingTotals', (request, response) => {
+    console.log("Fetching monthly booking totals");
+    const db = dbService.getDbServiceInstance();
+    
+    const result = db.getMonthlyBookingTotals();  // Call the function to fetch the data
+    
+    result
+      .then(data => response.json({ data: data }))  // Return the result as JSON
+      .catch(err => console.log(err));  // Handle any errors
+  });
+  
+  // Endpoint to get total tickets per show
+  app.get('/totalTicketsPerShow', (request, response) => {
+    console.log("Fetching total tickets per show");
+    const db = dbService.getDbServiceInstance();
+    
+    const result = db.getTotalTicketsPerShow();  // Call the function to fetch the data
+    
+    result
+      .then(data => response.json({ data: data }))  // Return the result as JSON
+      .catch(err => console.log(err));  // Handle any errors
+  });
+  
+  // Endpoint to get total revenue per booking
+  app.get('/totalRevenuePerBooking', (request, response) => {
+    console.log("Fetching total revenue per booking");
+    const db = dbService.getDbServiceInstance();
+    
+    const result = db.getTotalRevenuePerBooking();  // Call the function to fetch the data
+    
+    result
+      .then(data => response.json({ data: data }))  // Return the result as JSON
+      .catch(err => console.log(err));  // Handle any errors
+  });
+  
+
 app.get('/getHistoryAll/:username', (request, response) => {
 
     const username=request.params.username;
